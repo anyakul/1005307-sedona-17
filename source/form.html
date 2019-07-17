@@ -36,38 +36,38 @@
 	  <section class="comment">
 	    <h1 class="comment__title">Оставьте свой отзыв</h1>
 		<p class="comment__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+	    <form class="comment__form" method="POST" action="https://echo.htmlacademy.ru/">
+	      <fieldset class="comment__item comment__item--name">
+		    <legend class="comment__legend">Представьтесь:</legend>
+		    <label>Имя*:<input class="comment__input comment__input--text" type="text" name="name" placeholder="Петр"></label>
+		    <label>Фамилия*:<input class="comment__input comment__input--text" type="text" name="surname" placeholder="Иванов"></label>
+		    <label>Отчество:<input class="comment__input comment__input--text" type="text" name="patronymic" placeholder="Александрович"></label>
+		  </fieldset>
+		  <fieldset class="comment__item comment__item--contacts">
+		    <legend class="comment__legend">Контактная информация:</legend>
+		    <label>Контактный телефон*:<input class="comment__input comment__input--text" type="text" name="phone" placeholder="Введите телефон"></label>
+		    <label>Электронная почта*:<input class="comment__input comment__input--text" type="text" name="e-mail" placeholder="Введите e-mail"></label>
+		  </fieldset>
+		  <fieldset class="comment__item comment__item--impression">
+		    <legend class="comment__legend">Ваше общее впечатление:</legend>
+		    <label>Скорее положительное<input class="visually-hidden comment__input comment__input--radio" type="radio" name="comment" value="positive" checked></label>
+		    <label>Скорее отрицательное<input class="visually-hidden comment__input comment__input--radio" type="radio" name="comment" value="negative"></label>
+		    <label>Затрудняюсь ответить<input class="visually-hidden comment__input comment__input--radio" type="radio" name="comment" value="not-sure"></label>
+		  </fieldset>
+		  <fieldset class="comment__item comment__item--sightseeing">
+		    <legend class="comment__legend">Посещенные достопримечательности:</legend>
+		    <label>Мост дьявола<input class="visually-hidden comment__input comment__input--checkbox" type="checkbox" name="devil-bridge" checked></label>
+		    <label>Гора-Колокол<input class="visually-hidden comment__input comment__input--checkbox" type="checkbox" name="mountain-bell" checked></label>
+		    <label>Слайд-парк<input class="visually-hidden comment__input comment__input--checkbox" type="checkbox" name="slide-park" checked></label>
+		    <label>Красные скалы<input class="visually-hidden comment__input comment__input--checkbox" type="checkbox" name="red-rocks"></label>
+		  </fieldset>
+		  <fieldset class="comment__item comment__item--emotion">
+		    <legend class="comment__legend">Опишите ваши эмоции:</legend>
+		    <textarea class="comment__textarea" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+		  </fieldset>
+		  <button class="comment__button">Отправить отзыв</button>
+	    </form>
 	  </section>
-	  <form class="comment-form" method="POST" action="https://echo.htmlacademy.ru/">
-	    <fieldset class="comment-form__item comment-form__item--name">
-		  <legend>Представьтесь:</legend>
-		  <label>Имя*:<input class="comment" type="text" name="name" placeholder="Петр"></label>
-		  <label>Фамилия*:<input class="comment" type="text" name="surname" placeholder="Иванов"></label>
-		  <label>Отчество:<input class="comment" type="text" name="patronymic" placeholder="Александрович"></label>
-		</fieldset>
-		<fieldset class="comment-form__item comment-form__item--contacts">
-		  <legend>Контактная информация:</legend>
-		  <label>Контактный телефон*:<input class="comment" type="text" name="phone" placeholder="Введите телефон"></label>
-		  <label>Электронная почта*:<input class="comment" type="text" name="e-mail" placeholder="Введите e-mail"></label>
-		</fieldset>
-		<fieldset class="comment-form__item comment-form__item--impression">
-		  <legend>Ваше общее впечатление:</legend>
-		  <label>Скорее положительное<input class="visually-hidden comment-input comment-input__radio" type="radio" name="comment" value="positive" checked></label>
-		  <label>Скорее отрицательное<input class="visually-hidden comment-input comment-input__radio" type="radio" name="comment" value="negative"></label>
-		  <label>Затрудняюсь ответить<input class="visually-hidden comment-input comment-input__radio" type="radio" name="comment" value="not-sure"></label>
-		</fieldset>
-		<fieldset class="comment-form__item comment-form__item--sightseeing">
-		  <legend>Посещенные достопримечательности:</legend>
-		  <label>Мост дьявола<input class="visually-hidden comment-input comment-input__checkbox" type="checkbox" name="devil-bridge" checked></label>
-		  <label>Гора-Колокол<input class="visually-hidden comment-input comment-input__checkbox" type="checkbox" name="mountain-bell" checked></label>
-		  <label>Слайд-парк<input class="visually-hidden comment-input comment-input__checkbox" type="checkbox" name="slide-park" checked></label>
-		  <label>Красные скалы<input class="visually-hidden comment-input comment-input__checkbox" type="checkbox" name="red-rocks"></label>
-		</fieldset>
-		<fieldset class="comment-form__item comment-form__item--emotion">
-		  <legend>Опишите ваши эмоции:</legend>
-		  <textarea name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
-		</fieldset>
-		<button>Отправить отзыв</button>
-	  </form>
 	</main>
     <footer class="page-footer">
 	  <h2 class="page-footer__hashtag">#visitsedona</h2>
