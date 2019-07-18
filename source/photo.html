@@ -6,17 +6,17 @@
   </head>
   <body>
     <header class="page-header">
-	  <a class="page-header__logo">
-	    <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102" height="83" alt="City of Sedona">
-	  </a>
 	  <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
+		<a href="index.html" class="page-header__logo">
+	      <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102" height="83" alt="City of Sedona">
+	    </a>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--active">
               <a>Фото и видео</a>
             </li>
             <li class="site-list__item">
@@ -29,36 +29,40 @@
 		</div>
 	  </nav>
 	</header>
-	<main>
-	  <div class="inner-page-slogan">
+	<main class="page-main">
+	  <div class="page-slogan page-slogan--inner-page">
         <img src="https://via.placeholder.com/150" alt="слоган">
       </div>
-	  <section class="photo">
-	    <h1 class="photo__title">Фото и видео</h1>
-		<p class="photo__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике</p>
-		<div class="photo__item">
-		  <img class="photo__image" src="https://via.placeholder.com/150" alt="Неродные просторы">
-		  <h2 class="photo__title">Неродные просторы</h2>
-		  <p class="photo__author">Автор фото: Борис</p>
-		  <b class="photo__like">143</b>
+	  <section class="photoes">
+	    <h1 class="photoes__title">Фото и видео</h1>
+		<p class="photoes__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике</p>
+		<div class="photoes__item">
+		  <a><img class="photoes__image" src="https://via.placeholder.com/150" alt="Неродные просторы"></a>
+		  <h2 class="photoes__title">Неродные просторы</h2>
+		  <p class="photoes__author">Автор фото: Борис</p>
+		  <button class="photoes__like">like</button>
+		  <b class="photoes__like-number">143</b>
 		</div>
-		<div class="photo__item">
-		  <img class="photo__image" src="https://via.placeholder.com/150" alt="Местная растительность">
-	      <h2 class="photo__title">Местная растительность</h2>
-		  <p class="photo__author">Автор фото: Сергей</p>
-		  <b class="photo__like">143</b>
+		<div class="photoes__item">
+		  <a><img class="photoes__image" src="https://via.placeholder.com/150" alt="Местная растительность"></a>
+	      <h2 class="photoes__title">Местная растительность</h2>
+		  <p class="photoes__author">Автор фото: Сергей</p>
+		  <button class="photoes__like">like</button>
+		  <b class="photoes__like-number">143</b>
 		</div>
-		<div class="photo__item">
-		  <img class="photo__image" src="https://via.placeholder.com/150" alt="Дорога на север">
-		  <h2 class="photo__title">Дорога на север</h2>
-		  <p class="photo__author">Автор фото: Петр</p>
-		  <b class="photo__like">96</b>
+		<div class="photoes__item">
+		  <a><img class="photoes__image" src="https://via.placeholder.com/150" alt="Дорога на север"></a>
+		  <h2 class="photoes__title">Дорога на север</h2>
+		  <p class="photoes__author">Автор фото: Петр</p>
+		  <button class="photoes__like">like</button>
+		  <b class="photoes__like-number">96</b>
 		</div>
-		<div class="photo__item">
-		  <img class="photo__image" src="https://via.placeholder.com/150" alt="Неродные просторы">
-		  <h2 class="photo__title">Мост дьявола</h2>
-		  <p class="photo__author">Автор фото: Антон</p>
-		  <b class="photo__like">254</b>
+		<div class="photoes__item">
+		  <a><img class="photoes__image" src="https://via.placeholder.com/150" alt="Неродные просторы"></a>
+		  <h2 class="photoes__title">Мост дьявола</h2>
+		  <p class="photoes__author">Автор фото: Антон</p>
+		  <button class="photoes__like">like</button>
+		  <b class="photoes__like-number">254</b>
 		</div>
 	  </section>
 	  <section class="video">
