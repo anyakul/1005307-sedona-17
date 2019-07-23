@@ -1,0 +1,85 @@
+.comment fieldset {
+  border: none;
+}
+
+.comment {
+  text-align: center;
+  margin-bottom: 47px;
+}
+
+.comment__label {
+  text-align: left;
+}
+
+.comment__item {
+  margin-bottom: 25px;
+}
+
+.comment,
+.comment__title {
+  font-size: @title-font-size;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.comment__title {
+  margin-bottom: 30px;
+}
+
+.comment__description {
+  font-weight: normal;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.comment__form {
+  padding-top: 24px;
+}
+
+.comment__label--text {
+  font-weight: normal;
+  color: #333333;
+}
+
+.comment__label input,
+.comment__textarea {
+  font-size: @title-font-size;
+  font-weight: bold;
+  color: #000000;
+  background-color: @grey-background;
+  border: none;
+
+  &:hover {
+    background-color: @grey-background-hover;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #ffffff;
+    border: solid 4px #e5e5e5;
+  }
+}
+
+.comment__label--checkbox,
+.comment__label--radio {
+  text-transform: none;
+}
+
+.comment__button {
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: @blue-background;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: @blue-background-hover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @blue-background-active;
+  }
+}
