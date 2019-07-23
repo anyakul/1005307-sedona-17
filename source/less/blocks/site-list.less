@@ -9,7 +9,16 @@
   font-weight: bold;
   line-height: 26px;
   text-align: center;
-  background-color: @blue-backrgound;
+  background-color: @blue-background;
+  box-shadow: 0px 1px 0 0 rgba(1, 1, 1, 0.2);
+  &:hover,
+  &:focus {
+    background-color: @blue-background-hover;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @blue-background-active;
+  }
 }
 
 .site-list__item a {

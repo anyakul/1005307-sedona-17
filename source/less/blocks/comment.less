@@ -27,7 +27,6 @@
 }
 
 .comment__description {
-  font-size: @usual-font-size;
   font-weight: normal;
   line-height: 24px;
   margin-bottom: 20px;
@@ -38,7 +37,6 @@
 }
 
 .comment__label--text {
-  font-size: @usual-font-size;
   font-weight: normal;
   color: #333333;
 }
@@ -48,8 +46,16 @@
   font-size: @title-font-size;
   font-weight: bold;
   color: #000000;
-  background-color: @grey-backrgound;
+  background-color: @grey-background;
   border: none;
+  &:hover {
+    background-color: @grey-background-hover;
+  }
+  &:active,
+  &:focus {
+    background-color: #ffffff;
+    border: solid 4px #e5e5e5;
+  }
 }
 
 .comment__label--checkbox,
@@ -62,6 +68,14 @@
   line-height: 26px;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: @blue-backrgound;
+  background-color: @blue-background;
   border: none;
+  &:hover,
+  &:focus {
+    background-color: @blue-background-hover;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @blue-background-active;
+  }
 }

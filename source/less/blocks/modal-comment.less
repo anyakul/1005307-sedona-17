@@ -9,13 +9,20 @@
 }
 
 .modal-comment__description {
-  font-size: @usual-font-size;
   line-height: 24px;
   color: #333333;
 }
 
 .modal-comment__button {
   color: #ffffff;
-  background-color: @blue-backrgound;
+  background-color: @blue-background;
   border: none;
+  &:hover,
+  &:focus {
+    background-color: @blue-background-hover;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @blue-background-active;
+  }
 }
