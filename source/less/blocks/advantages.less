@@ -14,33 +14,27 @@
   margin-bottom: 19px;
 }
 
-.advantages__list {
-  padding-left: 0;
-  list-style: none;
-}
-
-.advantages__item {
-  padding-top: 23px;
-  padding-bottom: 22px;
+.advantages__row {
   background-color: @grey-background;
-  border-bottom: 1px solid #000000;
+  list-style: none;
+  padding-left: 0;
 }
 
-.advantages__description {
-  margin-bottom: 42px;
-}
-
-.advantages__item--real-city {
-  padding-top: 42px;
-}
-
-.advantages__item--diavols-bridge {
-  padding-top: 35px;
-}
-
-.advantages__item--real-city,
-.advantages__item--diavols-bridge {
-  padding-bottom: 0;
-  color: #ffffff;
-  background-color: @blue-background;
+@media (min-width: @tablet-width) {
+  .advantages__slogan {
+    width: 490px;
+    margin: 0;
+  }
+  
+  .advantages__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: @grey-background;
+  }
+  
+  .advantages__wrapper {
+    height: 260px;
+    background-color: @blue-background;
+  }
 }

@@ -1,0 +1,64 @@
+.advantages-item {
+  padding-top: 23px;
+  padding-bottom: 22px;
+}
+
+.advantages-item__description {
+  margin-bottom: 42px;
+}
+
+.advantages-item--diavols-bridge {
+  padding-top: 35px;
+}
+
+.advantages-item__wrapper--real-city {
+  padding-top: 61px;
+  background-color: @blue-background;
+  height: 189px;
+}
+
+.advantages-item__wrapper--diavols-bridge {
+  padding-top: 45px;
+  background-color: @blue-background;
+  height: 189px;
+}
+
+.advantages-item__wrapper--real-city,
+.advantages-item__wrapper--diavols-bridge {
+  padding-bottom: 0;
+  color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__slogan {
+    width: 490px;
+    margin: 0;
+  }
+
+  .advantages-item {
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+  }
+
+  .advantages-item .advantages-item__wrapper--diavols-bridge img {
+    order: 1;
+  }
+  
+  .advantages-item__wrapper--diavols-bridge {
+    order: 2;
+  }
+  
+  .advantages-item__wrapper {
+    height: 260px;
+    background-color: @blue-background;
+  }
+  
+  .advantages-item--small-square,
+  .advantages-item--beautiful-road,
+  .advantages-item--little-tourists {
+    display: flex;
+    flex-direction: column;
+    width: 135px;
+  }
+}

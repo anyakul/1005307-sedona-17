@@ -17,18 +17,18 @@
   font-size: 21px;
   line-height: 26px;
   background-color: @blue-background;
+}
 
-  &:hover,
-  &:focus {
-    background-color: @blue-background-hover;
+@media (min-width: 768px) {
+  .find-accommodation__description {
+    width: 434px;
+  }
+  
+  .find-accommodation__question {
+    font-size: 30px;
   }
 
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: @blue-background-active;
-  }
-
-  &:disabled {
-    background-color: #e5e5e5;
+  .find-accommodation__button {
+    width: 460px;
   }
 }

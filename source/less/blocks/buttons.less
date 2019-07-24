@@ -1,0 +1,20 @@
+.buttons {
+  color: #ffffff;
+  background-color: @blue-background;
+  border: none;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: @blue-background-hover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @blue-background-active;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
