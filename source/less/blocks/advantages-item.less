@@ -1,52 +1,103 @@
-.advantages-item {
-  padding-top: 23px;
-  padding-bottom: 22px;
+.advantages-item__title {
+  font-size: @title-font-size;
+  line-height: 26px;
 }
 
 .advantages-item__title,
 .advantages-item__number {
   .cancel();
+  .container();
+  padding-bottom: 15px;
 }
 
 .advantages-item__description {
   .cancel();
-  margin-bottom: 42px;
+  .container();
+}
+
+.advantages-item__image {
+  padding-bottom: 0;
 }
 
 .advantages-item__wrapper--real-city,
 .advantages-item__wrapper--diavols-bridge {
-  height: 189px;
-  padding-bottom: 0;
   color: #ffffff;
   background-color: @blue-background;
 }
 
 .advantages-item__wrapper--real-city {
-  padding-top: 61px;
+  padding-top: 51px;
+  padding-bottom: 40px;
 }
 
 .advantages-item__wrapper--diavols-bridge {
-  padding-top: 45px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+}
+
+.advantages-item--small-square,
+.advantages-item--beautiful-road,
+.advantages-item--little-tourists {
+  display: block;
+}
+
+.advantages-item--small-square .advantages-item__title,
+.advantages-item--beautiful-road .advantages-item__title,
+.advantages-item--little-tourists .advantages-item__title {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.advantages-item--small-square .advantages-item__description,
+.advantages-item--beautiful-road .advantages-item__description {
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.advantages-item--little-tourists {
+  padding-bottom: 32px;
 }
 
 @media (min-width: @tablet-width) {
   .advantages-item {
     display: flex;
     flex-direction: row;
-    padding-top: 40px;
+  }
+
+  .advantages-item__title,
+  .advantages-item__description {
+    width: 162px;
   }
 
   .advantages-item__wrapper--diavols-bridge img {
     order: 1;
   }
-  
+
   .advantages-item__wrapper--diavols-bridge {
     order: 2;
   }
-  
+
   .advantages-item--small-square,
   .advantages-item--beautiful-road,
   .advantages-item--little-tourists {
     display: block;
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+
+  .advantages-item--small-square {
+    width: 159px;
+  }
+
+  .advantages-item--beautiful-road {
+    width: 132px;
+  }
+
+  .advantages-item--little-tourists {
+    width: 135px;
+  }
+
+  .advantages-item--little-tourists .advantages-item__title {
+    width: 120px;
   }
 }

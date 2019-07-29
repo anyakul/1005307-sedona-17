@@ -1,5 +1,11 @@
+.video {
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
 .video__title {
   .cancel();
+  padding-bottom: 30px;
   font-size: @title-font-size;
   line-height: 26px;
   text-align: center;
@@ -7,16 +13,112 @@
 
 .video__description {
   .cancel();
+  .container();
+  width: 250px;
+  padding-bottom: 32px;
   line-height: 24px;
   text-align: center;
 }
 
-.video-buttons {
-  color: #333333;
+.video-wrapper {
+  position: relative;
+}
+
+.video__controls {
+  position: absolute;
+  bottom: 3px;
+  left: 21px;
+  z-index: 2;
+  display: block;
+  width: 280px;
+  height: 45px;
+  padding-top: 0;
+  background-color: #000000;
+  border: none;
+  opacity: 0.6;
+}
+
+.video__scale {
+  position: absolute;
+  bottom: 20px;
+  left: 21px;
+  z-index: 10;
+  display: block;
+  width: 235px;
+  height: 3px;
+  background-color: #ffffff;
+  opacity: 0.2;
+}
+
+.video__toggle {
+  position: absolute;
+  bottom: 17px;
+  left: 57px;
+  z-index: 20;
+  display: block;
+  width: 11px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.video__buttons {
+  .container();
+  position: relative;
+  width: 280px;
+  height: 66px;
+  padding-top: 0;
   background-color: @grey-background;
 }
 
-@media (min-width: 768px) {  
+.video__buttons svg {
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.video__replay {
+  position: absolute;
+  bottom: 27px;
+  left: 20px;
+  display: block;
+  width: 16px;
+  height: 20px;
+  cursor: pointer;
+  background-color: @grey-background;
+  border: none;
+}
+
+.video__subtitles {
+  position: absolute;
+  right: 95px;
+  bottom: 27px;
+  display: block;
+  width: 16px;
+  height: 20px;
+  cursor: pointer;
+  background-color: @grey-background;
+  border: none;
+}
+
+.video__fullscreen {
+  position: absolute;
+  right: 35px;
+  bottom: 27px;
+  display: block;
+  width: 16px;
+  height: 20px;
+  cursor: pointer;
+  background-color: @grey-background;
+  border: none;
+}
+
+@media (min-width: 768px) {
   .video__description {
     width: 428px;
     text-align: center;
