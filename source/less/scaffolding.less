@@ -9,55 +9,16 @@ body {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: @white-color;
 }
 
 @media (min-width: @tablet-width) {
   a {
-    color: #000000;
+    color: @black-color-title;
   }
 }
 
-.body-wrapper {
-  width: 320px;
-  margin: 0 auto;
-}
 
-@media (min-width: @tablet-width) {
-  .body-wrapper {
-    width: 768px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .body-wrapper {
-    width: 1200px;
-    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
-    margin: 0 auto;
-  }
-}
-
-.buttons {
-  text-align: center;
-  color: #ffffff;
-  background-color: @blue-background;
-  border: none;
-
-  &:hover,
-  &:focus {
-    background-color: @blue-background-hover;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: @blue-background-active;
-  }
-
-  &:disabled {
-    background-color: #e5e5e5;
-  }
-}
 
 @font-face {
   font-family: "PT Sans";
@@ -73,28 +34,14 @@ a {
   font-style: normal;
 }
 
-/*.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}*/
-
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;

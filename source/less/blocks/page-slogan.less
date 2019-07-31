@@ -1,7 +1,19 @@
 .page-slogan {
+  position: relative;
   text-align: center;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+}
+
+.page-slogan::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  width: 320px;
+  height: 26px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
 }
 
 .page-slogan--main-page {
@@ -24,15 +36,26 @@
 @media (min-width: @tablet-width) {
   .page-slogan {
     width: 768px;
-    margin-bottom: 51px;
     padding-top: 77px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
+    margin-bottom: 48px;
   }
 
   .page-slogan--main-page {
     height: 441px;
     background-position: 20% 20%;
   }
+  
+  .page-slogan--main-page::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 768px;
+    height: 57px;
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+    z-index: 20;
+}
 
   .page-slogan--inner-page {
     height: 269px;
@@ -52,6 +75,17 @@
     padding-top: 78px;
     background-position: 0 0;
   }
+
+    .page-slogan--main-page::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1200px;
+    height: 57px;
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+    z-index: 20;
+}
 
   .page-slogan--inner-page {
     height: 301px;

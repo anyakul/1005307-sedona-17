@@ -6,14 +6,14 @@
 
 .main-nav__toggle {
   position: absolute;
-  bottom: -35px;
   right: 20px;
+  bottom: -35px;
   z-index: 2;
   display: block;
   width: 23px;
   height: 21px;
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: @white-color;
   border: none;
 }
 
@@ -28,7 +28,7 @@
 
   &:hover,
   &:focus {
-    background-color: #669ec0;
+    background-color: @blue-color-hover;
   }
 }
 
@@ -43,7 +43,7 @@
     right: 0;
     width: 23px;
     height: 22px;
-    background-color: @blue-background;
+    background-color: @blue-color;
     background-image: url("../img/icon-cross.svg");
   }
 }
@@ -51,10 +51,6 @@
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .site-list__item {
     display: none;
-
-    &--active {
-      display: block;
-    }
   }
 
   .main-nav--opened .main-nav__list {
@@ -73,7 +69,6 @@
   .main-nav--nojs .site-list__item--active a {
     padding-right: 21px;
     padding-left: 21px;
-
     text-align: left;
   }
 }

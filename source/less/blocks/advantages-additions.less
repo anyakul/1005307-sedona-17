@@ -1,26 +1,28 @@
 .advantages-additions {
   .cancel();
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding-left: 69px;
   text-align: left;
 }
 
 .advantages-additions__item {
   position: relative;
-  padding-top: 30px;
+  padding-top: 35px;
   padding-bottom: 20px;
 }
 
 .advantages-additions__title {
   .cancel();
-  padding-bottom: 12px;
+  padding-bottom: 13px;
   font-size: @title-font-size;
   line-height: 26px;
+  color: @black-color-title;
 }
 
 .advantages-additions__description {
   .cancel();
+  color: @black-color-text
 }
 
 .advantages-additions__item--souvenirs {
@@ -34,8 +36,8 @@
 .advantages-additions__item--accommodation::before {
   content: "";
   position: absolute;
-  top: 20px;
-  left: -50px;
+  top: 25px;
+  left: -49px;
   width: 37px;
   height: 36px;
   background-image: url("../img/icon-house.svg");
@@ -44,7 +46,7 @@
 .advantages-additions__item--souvenirs::before {
   content: "";
   position: absolute;
-  top: 1px;
+  top: -3px;
   left: -45px;
   width: 32px;
   height: 38px;
@@ -54,7 +56,7 @@
 .advantages-additions__item--meal::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: -50px;
   width: 40px;
   height: 35px;
@@ -63,32 +65,38 @@
 }
 
 @media (min-width: @tablet-width) {
+  .advantages-additions__title {
+    .cancel();
+    padding-bottom: 20px;
+    font-size: @title-font-size-tablet;
+    line-height: 26px;
+  }
+
   .advantages-additions {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 164px;
+    width: @container-tablet;
+    margin: 0 auto;
+    margin-bottom: 42px;
     padding-left: 0;
-    .container();
-    width: 680px;
   }
 
   .advantages-additions__item {
     position: relative;
     text-align: center;
+    width: 158px;
     padding-left: 0;
+    padding-top: 152px;
   }
-
+  
   .advantages-additions__item--souvenirs {
-    padding-top: 10px;
-  }
-
-  .advantages-additions__item--meal {
-    padding-top: 10px;
+    width: 163px;
   }
 
   .advantages-additions__item--accommodation::before {
     content: "";
+    display: none;
     position: absolute;
     top: -20px;
     left: 100px;
@@ -99,6 +107,7 @@
 
   .advantages-additions__item--souvenirs::before {
     content: "";
+    display: none;
     position: absolute;
     top: -20px;
     left: 100px;
@@ -109,6 +118,7 @@
 
   .advantages-additions__item--meal::before {
     content: "";
+    display: none;
     position: absolute;
     top: 10px;
     left: -50px;

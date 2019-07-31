@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Седона</title>
+    <!--<style>
+      html {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-image: url("img/sedona-index-mobile.jpg")
+      }
+      @media(min-width: @tablet-width) {
+        html {
+          background-image: url("img/sedona-index-tablet.jpg")
+        }
+      }
+      @media(min-width: @desktop-width) {
+        html {
+          background-image: url("img/sedona-index-tablet.jpg")
+        }
+      }
+    </style>-->
   </head>
   <body>
     <div class="body-wrapper">
@@ -69,26 +86,28 @@
             <img class="advantages-item__image" src="img/main-bridge-mobile@1x.jpg" alt="Мост дьявола">
           </div>
           <div class="advantages__row">
-            <div class="advantages-item advantages-item--small-square">
-              <h3 class="advantages-item__title">Небольшая площадь</h3>
-              <p class="advantages-item__number">- №3 -</p>
-              <p class="advantages-item__description">Все интересные места находятся очень близко</p>
-            </div>
-            <div class="advantages-item advantages-item--beautiful-road">
-              <h3 class="advantages-item__title">Красивая дорога</h3>
-              <p class="advantages-item__number">- №4 -</p>
-              <p class="advantages-item__description">Ехать в Седону из Лас-Вегаса<br>совсем не скучно!</p>
-            </div>
-            <div class="advantages-item advantages-item--little-tourists">
-              <h3 class="advantages-item__title">Мало туристов</h3>
-              <p class="advantages-item__number">- №5 -</p>
-              <p class="advantages-item__description">Большинство едет в Гранд Каньон<br>и толпится там</p>
+            <div class="advantages__wrapper">
+              <div class="advantages-item advantages-item--small-square">
+                <h3 class="advantages-item__title">Небольшая площадь</h3>
+                <p class="advantages-item__number">- №3 -</p>
+                <p class="advantages-item__description">Все интересные места находятся очень близко</p>
+              </div>
+              <div class="advantages-item advantages-item--beautiful-road">
+                <h3 class="advantages-item__title">Красивая дорога</h3>
+                <p class="advantages-item__number">- №4 -</p>
+                <p class="advantages-item__description">Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</p>
+              </div>
+              <div class="advantages-item advantages-item--little-tourists">
+                <h3 class="advantages-item__title">Мало туристов</h3>
+                <p class="advantages-item__number">- №5 -</p>
+                <p class="advantages-item__description">Большинство едет в Гранд Каньон<br> и толпится там</p>
+              </div>
             </div>
           </div>
         </section>
         <section class="find-accommodation">
           <h2 class="find-accommodation__question">Заинтересовались?</h2>
-          <p class="find-accommodation__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="find-accommodation__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="find-accommodation__button buttons" href="#">Найти гостиницу</a>
           <img src="img/bg-map-mobile@1x.jpg" width="320px" height="350px" alt="Карта">
         </section>
