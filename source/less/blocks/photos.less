@@ -18,13 +18,20 @@
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
+  .photos__title {
+    padding-top: 20px;
+    font-size: 30px;
+  }
+
   .photos__group {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .photos__description {
     width: 428px;
   }
 }
+

@@ -1,7 +1,6 @@
 .main-nav {
   position: relative;
-  min-height: 51px;
-  margin: 0 auto;
+  margin: 0 auto;   
 }
 
 .main-nav__toggle {
@@ -49,7 +48,7 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .main-nav--closed .site-list__item {
+  .main-nav--closed .site-list {
     display: none;
   }
 
@@ -58,18 +57,12 @@
   }
 
   .main-nav--nojs .main-nav__list {
-    position: static;
+    position: static; 
     min-height: 0;
   }
 
   .main-nav--nojs .site-list__item {
     display: block;
-  }
-
-  .main-nav--nojs .site-list__item--active a {
-    padding-right: 21px;
-    padding-left: 21px;
-    text-align: left;
   }
 }
 
