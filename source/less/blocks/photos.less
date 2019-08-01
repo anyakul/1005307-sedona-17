@@ -3,24 +3,35 @@
 }
 
 .photos__title {
+  .cancel();
+  padding-bottom: 25px;
   font-size: @title-font-size;
   line-height: 26px;
   text-align: center;
 }
 
 .photos__description {
+  .cancel();
+  width: 269px;
+  margin: 0 auto;
+  padding-bottom: 25px;
   text-align: center;
 }
 
-.photos__item {
-  padding-left: 20px;
+@media (min-width: @tablet-width) {
+  .photos__title {
+    padding-top: 20px;
+    font-size: 30px;
+  }
+
+  .photos__group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .photos__description {
+    width: 428px;
+  }
 }
 
-.photos__name {
-  font-weight: bold;
-  color: #000000;
-}
-
-.photos__author {
-  text-transform: none;
-}

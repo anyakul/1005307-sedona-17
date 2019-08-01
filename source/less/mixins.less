@@ -1,10 +1,22 @@
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+.cancel() {
+  margin: 0;
   padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  list-style: none;
+}
+
+.container() {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .container-tablet() {
+    width: 680px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container() {
+    width: 940px;
+  }
 }
