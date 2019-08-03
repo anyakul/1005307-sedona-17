@@ -123,9 +123,15 @@
 }
 
 @media (min-width: @tablet-width) {
+  .video__title {
+    font-size: 30px;
+    padding-top: 35px;
+  }
+
   .video__description {
     width: 428px;
     text-align: center;
+    margin-bottom: 42px;
   }
 
   .video {
@@ -136,7 +142,7 @@
   .video__image {
     position: relative;
   }
-  
+
   .video-wrapper {
     position: relative;
   }
@@ -144,15 +150,14 @@
   .video__controls {
     position: absolute;
     bottom: 0;
-    left: 21px;
+    left: 0;
     z-index: 2;
     display: block;
     width: 648px;
     height: 93px;
     padding-top: 0;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.6);
     border: none;
-    opacity: 0.6;
   }
 
   .video__scale {
@@ -163,8 +168,6 @@
     display: block;
     width: 389px;
     height: 3px;
-    background-color: #ffffff;
-
   }
 
   .video__toggle {
@@ -187,10 +190,12 @@
     z-index: 20;
   }
 
-  .video__buttons svg {
+  .video__buttons polygon,
+  .video__buttons path {
     fill: @white-color;
     z-index: 20;
     opacity: 1;
+
     &:hover,
     &:focus {
       fill: #333333;
@@ -203,40 +208,164 @@
 
   .video__replay {
     position: absolute;
-    bottom: 38px;
-    left: 35px;
+    left: 30px;
+    bottom: 37px;
+    z-index: 2;
     display: block;
-    width: 16px;
-    padding: 0;
-    height: 20px;
+    width: 23px;
+    height: 21px;
     cursor: pointer;
-    background-color: transparent;
     border: none;
-    z-index: 20;
-    opacity: 1;
+    background-color: transparent;
   }
 
   .video__subtitles {
     position: absolute;
-    right: 95px;
-    bottom: 27px;
+    left: 518px;
+    bottom: 38px;
     display: block;
     width: 16px;
     height: 20px;
     cursor: pointer;
-    background-color: @white-color;
     border: none;
+    background-color: transparent;
   }
 
   .video__fullscreen {
     position: absolute;
-    right: 35px;
-    bottom: 27px;
+    left: 582px;
+    bottom: 39px;
     display: block;
     width: 16px;
     height: 20px;
     cursor: pointer;
-    background-color: @white-color;
+    opacity: 1;
     border: none;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video__title {
+    font-size: 30px;
+    padding-top: 38px;
+    margin-bottom: 4px;
+  }
+
+  .video__description {
+    width: 800px;
+    text-align: center;
+    margin-bottom: 38px;
+  }
+
+  .video {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .video__image {
+    position: relative;
+  }
+
+  .video-wrapper {
+    position: relative;
+  }
+
+  .video__controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 800px;
+    height: 93px;
+    padding-top: 0;
+    background-color: #000000;
+    border: none;
+    opacity: 0.6;
+  }
+
+  .video__scale {
+    position: absolute;
+    bottom: 46px;
+    left: 93px;
+    z-index: 10;
+    display: block;
+    width: 540px;
+    height: 3px;
+  }
+
+  .video__toggle {
+    position: absolute;
+    bottom: 42px;
+    left: 205px;
+    z-index: 20;
+    display: block;
+    width: 11px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  .video__buttons {
+    position: absolute;
+    width: 280px;
+    height: 2px;
+    padding-top: 0;
+    z-index: 20;
+  }
+
+  .video__buttons polygon,
+  .video__buttons path {
+    fill: @white-color;
+    z-index: 20;
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+      fill: #333333;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .video__replay {
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    z-index: 2;
+    display: block;
+    width: 23px;
+    height: 21px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+
+  .video__subtitles {
+    position: absolute;
+    left: 670px;
+    bottom: 40px;
+    display: block;
+    width: 16px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+
+  .video__fullscreen {
+    position: absolute;
+    left: 731px;
+    bottom: 39px;
+    display: block;
+    width: 16px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 1;
+    border: none;
+    background-color: transparent;
   }
 }

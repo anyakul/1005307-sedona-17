@@ -5,7 +5,7 @@
 .advantages__slogan {
   .cancel();
   .container();
-  padding-bottom: 25px;
+  margin-bottom: 25px;
   font-size: @title-font-size;
   line-height: 26px;
   color: @black-color-title;
@@ -14,7 +14,7 @@
 .advantages__intro {
   .cancel();
   .container();
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   line-height: 26px;
   color: @black-color-text;
 }
@@ -28,7 +28,7 @@
     .cancel();
     .container();
     width: 460px;
-    margin-bottom: 31px;
+    margin-bottom: 32px;
     font-size: @title-font-size-tablet;
   }
 
@@ -40,27 +40,33 @@
     .cancel();
     .container();
     width: 490px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 
   .advantages__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: @container-tablet;
+    width: 800px;
     margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 1px;
+    padding-left: 0;
   }
-
 }
 
 @media (min-width: @desktop-width) {
   .advantages__slogan {
-    padding-left: 0px;
+    padding-top: 5px;
+    margin-bottom: 30px;
+  }
+
+  .advantages__intro {
+    margin-bottom: 48px;
   }
 
   .advantages__wrapper {
-    width: @container-desktop;
-    padding-left: 0px;
-    padding-bottom: 28px;
+    width: 1100px;
+    padding-bottom: 25px;
   }
 }

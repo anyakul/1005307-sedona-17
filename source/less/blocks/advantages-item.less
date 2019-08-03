@@ -1,8 +1,13 @@
+.advantages-item__wrapper {
+  color: @white-color;
+  background-color: @blue-color;
+}
+
 .advantages-item__title {
   .cancel;
+  padding-bottom: 10px;
   font-size: @title-font-size;
   line-height: 26px;
-  padding-bottom: 10px;
 }
 
 .advantages-item__number {
@@ -20,18 +25,12 @@
   vertical-align: bottom;
 }
 
-.advantages-item--real-city,
-.advantages-item--diavols-bridge {
-  color: @white-color;
-  background-color: @blue-color;
-}
-
-.advantages-item--real-city {
+.advantages-item__wrapper--real-city {
   position: relative;
   padding-top: 75px;
 }
 
-.advantages-item--diavols-bridge {
+.advantages-item__wrapper--diavols-bridge {
   padding-top: 40px;
 }
 
@@ -39,7 +38,8 @@
 .advantages-item--beautiful-road,
 .advantages-item--little-tourists {
   .container();
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .advantages-item--small-square .advantages-item__title,
@@ -55,119 +55,152 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .advantages-item--real-city:before {
+  .advantages-item__title br {
+    display: none;
+  }
+
+  .advantages-item__wrapper--real-city::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 20;
     width: 320px;
     height: 37px;
     background-image: url("../img/bg-triangle.svg");
-    z-index: 20;
   }
-  
-  .advantages-item__title br {
-    display: none;
-  }
-  
+
   .advantages-item--small-square .advantages-item__description,
-  .advantages-item--beautiful-road .advantages-item__description,
-  .advantages-item--little-tourists .advantages-item__description {
+  .advantages-item--beautiful-road .advantages-item__description {
     padding-bottom: 30px;
-    color: @black-color-text;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .advantages-item__text {
-    .container();
   }
 
   .advantages-item--little-tourists .advantages-item__description {
-  padding-bottom: 29px;
-  border-bottom: none;
-}
+    padding-bottom: 29px;
+    color: @black-color-text;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .advantages-item--real-city,
-  .advantages-item--diavols-bridge {
-    width: 768px;
-    height: 256px;
-    display: flex;
-    flex-direction: row;
-    margin-left: 0;
-    text-align: center;
+  .advantages-item__wrapper {
+    width: 256px;
   }
 
   .advantages-item__title {
     font-size: @title-font-size-tablet;
   }
 
-  .advantages-item--small-square,
-  .advantages-item--beautiful-road,
-  .advantages-item--little-tourists {
-    display: flex;
-    flex-direction: column;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 0;
-  }
-  
-  .advantages-item--small-square {
-    width: 160px;
-  }
-
-  .advantages-item--beautiful-road {
-    width: 132px;
-  }
-  
-  .advantages-item--little-tourists {
-    width: 150px;
-  }
-  
-  .advantages-item--beautiful-road br,
-  .advantages-item--little-tourists br {
-    display: none;
-  }
-
-  .advantages-item--diavols-bridge .advantages-item__wrapper img {
-    order: 1;
-  }
-
-  .advantages-item--diavols-bridge .advantages-item__wrapper {
-    order: 2;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .advantages-item--small-square {
-    width: 285px;
-    text-align: center;
-  }
-
-  .advantages-item--beautiful-road {
-    width: 262px;
-    text-align: center;
-  }
-
-  .advantages-item--little-tourists {
-    width: 260px;
-    text-align: center;
-  }
-
-  .advantages-item__title {
-    padding-left: 0;
+  .advantages-item__number {
+    padding-bottom: 22px;
   }
 
   .advantages-item__description br {
     display: none;
   }
 
-  .advantages-item__title br {
+  .advantages-item--real-city,
+  .advantages-item--diavols-bridge {
+    display: flex;
+    flex-direction: row;
+    width: 768px;
+    height: 256px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .advantages-item--real-city .advantages-item__wrapper,
+  .advantages-item--diavols-bridge .advantages-item__wrapper {
+    width: 162px;
+    padding-top: 44px;
+    padding-right: 47px;
+    padding-left: 47px;
+  }
+
+  .advantages-item__wrapper--diavols-bridge img {
+    order: 1;
+  }
+
+  .advantages-item__wrapper--diavols-bridge {
+    order: 2;
+  }
+
+  .advantages-item--beautiful-road br,
+  .advantages-item--little-tourists br {
+    display: none;
+  }
+
+  .advantages-item--small-square {
+    width: 160px;
+    margin-left: 50px;
+  }
+
+  .advantages-item--beautiful-road {
+    width: 132px;
+    margin-left: 18px;
+  }
+
+  .advantages-item--little-tourists {
+    width: 150px;
+    margin-left: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages-item--real-city .advantages-item__wrapper,
+  .advantages-item--diavols-bridge .advantages-item__wrapper {
+    width: 400px;
+    padding-top: 50px;
+    padding-right: 47px;
+    padding-left: 47px;
+  }
+
+  .advantages-item__title br,
+  .advantages-item__description br {
     display: inline;
   }
 
   .advantages-item__number {
+    padding-bottom: 22px;
+  }
+
+  .advantages-item__image {
+    width: 800px;
+    height: 256px;
+  }
+
+  .advantages-item--real-city,
+  .advantages-item--diavols-bridge {
+    width: 1200px;
+    height: 256px;
+    margin-left: 0;
     text-align: center;
   }
-}  
+
+  .advantages-item--small-square .advantages-item__title,
+  .advantages-item--beautiful-road .advantages-item__title,
+  .advantages-item--little-tourists .advantages-item__title {
+    margin-bottom: 0;
+  }
+
+  .advantages-item--small-square {
+    width: 285px;
+    margin-left: 5px;
+  }
+
+  .advantages-item--beautiful-road .advantages-item__description br,
+  .advantages-item--little-tourists .advantages-item__description br {
+    display: none;
+  }
+
+  .advantages-item--beautiful-road {
+    width: 262px;
+    margin-left: 85px;
+  }
+
+  .advantages-item--little-tourists {
+    width: 260px;
+    margin-right: 20px;
+    margin-left: 100px;
+  }
+}
