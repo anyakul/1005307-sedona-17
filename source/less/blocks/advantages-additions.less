@@ -25,10 +25,7 @@
   color: @black-color-text;
 }
 
-.advantages-additions__item--souvenirs {
-  padding-top: 10px;
-}
-
+.advantages-additions__item--souvenirs,
 .advantages-additions__item--meal {
   padding-top: 10px;
 }
@@ -64,23 +61,16 @@
   background-repeat: no-repeat;
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: @mobile-width-only) {
   .advantages-additions__item--souvenirs br {
     display: none;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .advantages-additions__title {
-    .cancel();
-    padding-bottom: 21px;
-    font-size: @title-font-size-tablet;
-    line-height: 26px;
-  }
-
   .advantages-additions {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 670px;
     margin: 0 auto;
@@ -90,10 +80,24 @@
 
   .advantages-additions__item {
     position: relative;
-    text-align: center;
     width: 158px;
-    padding-left: 0;
     padding-top: 155px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .advantages-additions__title {
+    padding-bottom: 21px;
+    font-size: @title-font-size-tablet;
+  }
+
+  .advantages-additions__item--souvenirs {
+    width: 163px;
+    order: 2;
+  }
+
+  .advantages-additions__item--meal {
+    order: 1;
   }
 
   .advantages-additions__item--accommodation::before {
@@ -131,38 +135,22 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-
-  .advantages-additions__item--souvenirs {
-    order: 2;
-    width: 163px;
-  }
-
-  .advantages-additions__item--meal {
-    order: 1;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .advantages-additions {
     width: @container-desktop;
-    margin-left: 55px;
     margin-bottom: 62px;
+    margin-left: 55px;
   }
 
   .advantages-additions__item {
-    position: relative;
-    text-align: center;
-    padding-left: 0;
-    padding-top: 160px;
     width: 290px;
+    padding-top: 160px;
   }
 
   .advantages-additions__item--meal br {
     display: none;
-  }
-
-  .advantages-additions__item--souvenirs {
-    width: 290px;
   }
 
   .advantages-additions__item--accommodation::before {

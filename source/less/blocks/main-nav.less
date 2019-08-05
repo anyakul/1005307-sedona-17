@@ -3,52 +3,52 @@
   margin: 0 auto;
 }
 
-.main-nav__toggle {
-  position: absolute;
-  right: 20px;
-  bottom: -35px;
-  z-index: 2;
-  display: block;
-  width: 23px;
-  height: 21px;
-  cursor: pointer;
-  background-color: @white-color;
-  border: none;
-}
-
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 23px;
-  height: 21px;
-  background-image: url("../img/icon-menu.svg");
-
-  &:hover,
-  &:focus {
-    background-color: @blue-color-hover;
+@media (max-width: @mobile-width-only) {
+  .main-nav__toggle {
+    position: absolute;
+    right: 20px;
+    bottom: -35px;
+    z-index: 2;
+    display: block;
+    width: 23px;
+    height: 21px;
+    background-color: @white-color;
+    border: none;
+    cursor: pointer;
   }
-}
 
-.main-nav--opened .main-nav__toggle {
-  top: 17px;
-  right: 20px;
-
-  &::before {
+  .main-nav--closed .main-nav__toggle::before {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     width: 23px;
-    height: 22px;
-    background-color: @blue-color;
-    background-image: url("../img/icon-cross.svg");
-  }
-}
+    height: 21px;
+    background-image: url("../img/icon-menu.svg");
 
-@media (max-width: @mobile-width-only) {
-  .main-nav--closed .site-list {
+    &:hover,
+    &:focus {
+      background-color: @blue-color-hover;
+    }
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    top: 17px;
+    right: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 23px;
+      height: 22px;
+      background-color: @blue-color;
+      background-image: url("../img/icon-cross.svg");
+    }
+  }
+
+  .main-nav--closed .main-nav__list {
     display: none;
   }
 

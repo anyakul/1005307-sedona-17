@@ -8,10 +8,28 @@
 .page-slogan--main-page {
   width: 320px;
   height: 299px;
-  margin-bottom: 46px;
+  margin-bottom: 42px;
   padding-top: 90px;
   background-position: 50% center;
   background-size: cover;
+}
+
+.page-slogan--inner-page {
+  width: 320px;
+  height: 106px;
+  margin-bottom: 0;
+  padding-top: 52px;
+  background-position: 50% 100%;
+}
+
+.page-slogan--main-page img {
+  width: 281px;
+  height: 214px;
+}
+
+.page-slogan--inner-page img {
+  width: 229px;
+  height: 39px;
 }
 
 .page-slogan--main-page::before,
@@ -27,24 +45,6 @@
   background-image: url("../img/bg-intro-triangle-mobile.svg");
 }
 
-.page-slogan--main-page img {
-  width: 281px;
-  height: 214px;
-}
-
-.page-slogan--inner-page {
-  width: 320px;
-  height: 106px;
-  margin-bottom: 0;
-  padding-top: 52px;
-  background-position: 50% 100%;
-}
-
-.page-slogan--inner-page img {
-  width: 229px;
-  height: 39px;
-}
-
 @media (min-width: @tablet-width) {
   .page-slogan {
     width: 768px;
@@ -57,9 +57,22 @@
     background-position: 20% 20%;
   }
 
+  .page-slogan--inner-page {
+    height: 270px;
+    margin: 0 auto;
+    padding-top: 75px;
+    padding-bottom: 0;
+    background-position: 20% 131%;
+  }
+
   .page-slogan--main-page img {
     width: 455px;
     height: 500px;
+  }
+
+  .page-slogan--inner-page img {
+    width: 460px;
+    height: 120px;
   }
 
   .page-slogan--main-page::before {
@@ -72,19 +85,6 @@
     height: 70px;
     background-image: url("../img/bg-intro-triangle-tablet.svg");
     background-repeat: no-repeat;
-  }
-
-  .page-slogan--inner-page {
-    height: 270px;
-    margin: 0 auto;
-    padding-top: 75px;
-    padding-bottom: 0;
-    background-position: 20% 131%;
-  }
-
-  .page-slogan--inner-page img {
-    width: 460px;
-    height: 120px;
   }
 
   .page-slogan--inner-page::before {
@@ -103,13 +103,18 @@
   .page-slogan {
     width: 1200px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-repeat: no-repeat;
   }
 
   .page-slogan--main-page {
     height: 440px;
     padding-top: 78px;
     background-position: 0 0;
+  }
+
+  .page-slogan--inner-page {
+    height: 324px;
+    padding-top: 80px;
+    background-position: 0 190%;
   }
 
   .page-slogan--main-page img {
@@ -127,12 +132,6 @@
     height: 65px;
     background-image: url("../img/bg-intro-triangle-desktop.svg");
     background-repeat: no-repeat;
-  }
-
-  .page-slogan--inner-page {
-    height: 324px;
-    padding-top: 80px;
-    background-position: 0 190%;
   }
 
   .page-slogan--inner-page::before {

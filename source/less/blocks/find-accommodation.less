@@ -5,10 +5,33 @@
 .find-accommodation__question {
   .cancel();
   .container();
-  padding-top: 30px;
+  padding-top: 25px;
+  padding-bottom: 20px;
   font-size: 21px;
   line-height: 26px;
   color: @black-color-title;
+}
+
+.find-accommodation__description {
+  .cancel();
+  .container();
+  padding-bottom: 35px;
+  line-height: 24px;
+  color: @black-color-text;
+}
+
+.find-accommodation__button {
+  .cancel();
+  .container();
+  display: block;
+  width: 240px;
+  margin-bottom: 49px;
+  padding: 16px 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 21px;
+  line-height: 26px;
+  background-color: @blue-color;
 }
 
 .find-accommodation__map {
@@ -20,31 +43,10 @@
   position: absolute;
   top: 161px;
   left: 146px;
+  z-index: 1;
   width: 27px;
   height: 27px;
-  z-index: 1;
   background-image: url("../img/icon-map-marker.svg");
-}
-
-.find-accommodation__description {
-  .cancel();
-  .container();
-  padding-top: 15px;
-  padding-bottom: 35px;
-  line-height: 24px;
-  color: @black-color-text;
-}
-
-.find-accommodation__button {
-  .cancel();
-  .container();
-  display: block;
-  width: 280px;
-  margin-bottom: 49px;
-  padding: 16px 0;
-  font-size: 21px;
-  line-height: 26px;
-  background-color: @blue-color;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -53,14 +55,14 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .find-accommodation {
-    padding-top: 26px;
+    padding-top: 30px;
   }
 
   .find-accommodation__question {
-    padding-bottom: 15px;
     font-size: 30px;
+    padding-bottom: 30px;
   }
 
   .find-accommodation__description {
@@ -69,7 +71,7 @@
   }
 
   .find-accommodation__button {
-    width: 458px;
+    width: 418px;
     margin-bottom: 58px;
     margin-left: 155px;
   }
@@ -92,13 +94,12 @@
   }
 
   .find-accommodation__description {
-    padding-bottom: 50px;
+    padding-bottom: 47px;
   }
 
   .find-accommodation__button {
-    width: 458px;
-    margin-left: 371px;
     margin-bottom: 65px;
+    margin-left: 371px;
   }
 
   .find-accommodation__map::before {
