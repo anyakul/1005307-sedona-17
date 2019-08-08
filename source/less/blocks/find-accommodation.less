@@ -5,7 +5,7 @@
 .find-accommodation__question {
   .cancel();
   .container();
-  padding-top: 25px;
+  padding-top: 28px;
   padding-bottom: 20px;
   font-size: 21px;
   line-height: 26px;
@@ -15,7 +15,7 @@
 .find-accommodation__description {
   .cancel();
   .container();
-  padding-bottom: 35px;
+  padding-bottom: 34px;
   line-height: 24px;
   color: @black-color-text;
 }
@@ -36,6 +36,9 @@
 
 .find-accommodation__map {
   position: relative;
+  width: 320px;
+  height: 350px;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
 }
 
 .find-accommodation__map::before {
@@ -59,10 +62,17 @@
   .find-accommodation {
     padding-top: 30px;
   }
+  
+  .find-accommodation__map {
+    position: relative;
+    width: 768px;
+    height: 350px;
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+  }
 
   .find-accommodation__question {
-    font-size: 30px;
     padding-bottom: 30px;
+    font-size: 30px;
   }
 
   .find-accommodation__description {
@@ -100,6 +110,13 @@
   .find-accommodation__button {
     margin-bottom: 65px;
     margin-left: 371px;
+  }
+
+  .find-accommodation__map {
+    position: relative;
+    width: 1200px;
+    height: 350px;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
   }
 
   .find-accommodation__map::before {

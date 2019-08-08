@@ -43,7 +43,6 @@
   .site-list__item {
     width: 153px;
     height: 41px;
-    margin-bottom: 0;
     padding-top: 15px;
     font-size: 14px;
     line-height: 26px;
@@ -60,11 +59,9 @@
   }
 
   .site-list__item .buttons {
-    height: 41px;
     padding-top: 0;
     color: @black-color-title;
     background-color: @white-color;
-    box-shadow: none;
 
     &:hover,
     &:focus {
@@ -84,10 +81,12 @@
     &:hover,
     &:focus {
       color: @brown-color-hover;
+      background-color: @white-color;
     }
 
     &:active {
-      color: rgba(0, 0, 0, 0.3);
+      color: rgba(118, 99, 87, 0.3);
+      background-color: @white-color;
     }
   }
 }
