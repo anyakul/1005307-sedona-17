@@ -75,7 +75,8 @@
   background-color: @grey-color;
 }
 
-.video__buttons svg {
+.video__buttons polygon,
+.video__buttons path {
   &:hover,
   &:focus {
     fill: #333333;
@@ -201,7 +202,8 @@
 
     &:hover,
     &:focus {
-      fill: #333333;
+      fill: #ffffff;
+      opacity: 0.6;
     }
 
     &:active {
@@ -283,9 +285,7 @@
     width: 800px;
     height: 93px;
     padding-top: 0;
-    background-color: #000000;
     border: none;
-    opacity: 0.6;
   }
 
   .video__scale {
@@ -313,22 +313,6 @@
     width: 280px;
     height: 2px;
     z-index: 20;
-  }
-
-  .video__buttons polygon,
-  .video__buttons path {
-    fill: @white-color;
-    z-index: 20;
-    opacity: 1;
-
-    &:hover,
-    &:focus {
-      fill: #333333;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
   }
 
   .video__replay {

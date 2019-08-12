@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 18px;
+  font-size: @title-font-size;
   font-weight: bold;
   line-height: 26px;
 }
@@ -12,6 +12,7 @@
   width: 320px;
   text-align: center;
   padding-top: 40px;
+  margin-bottom: 73px;
 }
 
 .comment__title {
@@ -19,71 +20,81 @@
 }
 
 .comment__description {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
+  padding-bottom: 14px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .comment__form {
   padding-top: 20px;
 }
 
-.comment fieldset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border: 0 none;
-  text-align: left;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-bottom: 5px;
+.comment__form fieldset {
+  .cancel();
   margin-bottom: 18px;
+  padding-bottom: 5px;
+  text-align: left;
+  border: 0 none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.comment legend {
-  padding-left: 0;
+.comment__item legend {
   margin: 0 auto;
   margin-bottom: 20px;
+  padding-left: 0;
 }
 
 .comment__item ul,
 .comment__item li {
   margin: 0;
   padding: 0;
-  list-style: none;
   padding-left: 10px;
+  list-style: none;
 }
 
 .comment__label {
   font-size: 14px;
   font-weight: normal;
-  color: #333333;
+  color: @black-color-text;
+}
+
+.comment__label label {
+  .cancel();
+  padding-right: 10px;
 }
 
 .comment__label input,
 .comment__textarea {
-  font-size: 18px;
+  padding: 5px;
+  font-size: @title-font-size;
   font-weight: bold;
-  color: #000000;
-  background-color: #f2f2f2;
+  color: @black-color-title;
+  background-color: @grey-color;
   border: none;
-}
 
-.comment__label label {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  padding-right: 10px;
+  &:hover {
+    background-color: @grey-color-hover;
+    outline: none;
+  }
+
+  &:active,
+  &:focus {
+    height: 50px;
+    background-color: @white-color;
+    border: 4px solid @grey-color-hover;
+    outline: none;
+  }
 }
 
 .comment__label input {
+  height: 58px;
   margin: 0;
   padding: 0;
-  list-style: none;
-  height: 58px;
   padding-left: 20px;
+  list-style: none;
 }
 
 .comment__label--radio,
@@ -114,8 +125,8 @@
 }
 
 .comment__item--contacts label {
-  padding-left: 20px;
   position: relative;
+  padding-left: 20px;
 }
 
 .comment__item--contacts input {
@@ -125,6 +136,11 @@
 
 .comment__label--phone input {
   margin-top: 5px;
+}
+
+.comment__label--email input {
+  margin-top: 7px;
+  margin-bottom: 6px;
 }
 
 .comment__label--phone label::before {
@@ -149,11 +165,11 @@
   background-image: url("../img/icon-phone.svg");
 }
 
-.comment__label--email label::before {
+   .comment__label--email label::before {
   content: "";
   position: absolute;
-  top: 29px;
-  left: 222px;
+  top: 30px;
+  left: 221px;
   z-index: 20;
   width: 58px;
   height: 58px;
@@ -171,25 +187,34 @@
   background-image: url("../img/icon-mail.svg");
 }
 
-.comment__label--email input {
-  margin-top: 7px;
-  margin-bottom: 6px;
-}
-
-.comment__item--impression li:last-of-type {
-  margin-bottom: 36px;
-}
-
 .comment__item--impression legend {
   margin-bottom: 40px;
 }
 
+.comment__item--sightseeing legend {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
 .comment__item--impression li,
 .comment__item--sightseeing li {
-  width: 200px;
-  margin-left: 80px;
-  margin-bottom: 40px;
   position: relative;
+  margin-bottom: 40px;
+  margin-left: 80px;
+}
+
+.comment__item--impression li:last-child {
+  margin-bottom: 36px;
+}
+
+.comment__item--sightseeing li {
+  text-align: left;
+  margin-bottom: 54px;
+  margin-left: 80px;
+}
+
+.comment__item--sightseeing li:last-of-type {
+  margin-bottom: 32px;
 }
 
 .comment__item--impression label,
@@ -204,8 +229,8 @@
   left: -70px;
   width: 55px;
   height: 55px;
-  border-radius: 50%;
   background-color: #f2f2f2;
+  border-radius: 50%;
 }
 
 .comment__radio:checked + label::after {
@@ -215,26 +240,8 @@
   left: -52px;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
   background-color: #333333;
-}
-
-.comment .comment__item--sightseeing {
-  text-align: center;
-}
-
-.comment__item--sightseeing legend {
-  margin-bottom: 30px;
-}
-
-.comment__item--sightseeing li {
-  text-align: left;
-  margin-bottom: 54px;
-  margin-left: 80px;
-}
-
-.comment__item--sightseeing li:last-of-type {
-  margin-bottom: 32px;
+  border-radius: 50%;
 }
 
 .comment__check-box + label::before {
@@ -271,44 +278,33 @@
   line-height: 26px;
 }
 
-.comment .comment__button {
+.comment__button {
+  margin-top: 18px;
+  padding: 16px 47px;
   font-size: 21px;
   line-height: 26px;
+  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #81b3d2;
   border: none;
-  text-align: center;
-  margin-top: 18px;
-  padding: 20px 47px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.comment__button:hover,
-.comment__button:focus {
-  background-color: #669ec0;
-}
-
-.comment__button:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #5496bd;
 }
 
 .comment__mark {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .comment {
     width: 648px;
     margin: 0 auto;
+    margin-bottom: 70px;
     padding-top: 20px;
   }
 
   .comment__title {
-    font-size: 30px;
     margin-bottom: 30px;
+    font-size: 30px;
   }
 
   .comment__description {
@@ -324,19 +320,68 @@
     padding-left: 0;
   }
 
+  .comment__form fieldset {
+    margin-bottom: 70px;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  .comment__item {
+    padding-bottom: 0;
+  }
+
   .comment__legend {
+    position: relative;
     font-size: 21px;
   }
 
-  .comment fieldset {
-    border: none;
+  .comment__item ul,
+  .comment__item li {
+    padding-left: 0;
+  }
+
+  .comment__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .comment__label:last-child {
+    padding-bottom: 0;
   }
 
   .comment .comment__item--impression {
     width: 322px;
-    order: 1;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 32px;
+    text-align: left;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    order: 1;
+  }
+
+  .comment__item--impression legend {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .comment__item--impression li {
+    display: inline-block;
+    margin-left: 63px;
+    margin-bottom: 52px;
+    position: relative;
+  }
+
+  .comment__item--impression li:last-child {
+    margin-bottom: 0;
+  }
+
+  .comment__label--radio input {
+     .cancel();
+  }
+
+  .comment__label--radio label {
+    margin-left: 0;
+    padding-left: 6px;
+    left: 0;
   }
 
   .comment__radio + label::before {
@@ -347,7 +392,7 @@
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background-color: #f2f2f2;
+    background-color: @grey-color;
   }
 
   .comment__radio:checked + label::after {
@@ -361,38 +406,16 @@
     background-color: #333333;
   }
 
-  .comment__item {
-    padding-bottom: 0;
-  }
-
-  .comment__item--impression legend {
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  .comment__item--name legend {
-    margin-left: 55px;
-    padding-left: 0;
-  }
-
-  .comment__item--impression li {
-    margin-left: 50px;
-    margin-bottom: 52px;
-  }
-
   .comment__item--name {
-    padding-left: 60px;
     width: 325px;
+    padding-left: 70px;
     order: 2;
   }
 
-  .comment__item--name label {
-    margin-left: 40px;
-    padding-right: 5px;
-    padding-top: 17px;
-    text-align: left;
-    flex-grow: 1;
-    align-items: center;
+  .comment__item--name legend {
+    margin-bottom: 58px;
+    margin-left: 55px;
+    padding-left: 0;
   }
 
   .comment__item--name li {
@@ -401,39 +424,119 @@
     text-align: left;
   }
 
+  .comment__item--name li:last-child {
+    margin-bottom: 0;
+  }
+
+  .comment__item--name label {
+    margin-left: 60px;
+    padding-right: 5px;
+    padding-top: 17px;
+    text-align: left;
+    flex-grow: 1;
+    align-items: center;
+  }
+
   .comment__item--name input {
     width: 150px;
-    order: 2;
     flex-grow: 2;
-  }
-
-  .comment__label--name input {
-    width: 172px;
+    margin-bottom: 0;
     order: 2;
-    flex-grow: 2;
   }
 
-  .comment__item--name legend {
-    margin-bottom: 58px;
-  }
-
-  .comment__item--contacts {
+  .comment .comment__item--contacts {
     width: 640px;
+    padding-bottom: 0;
     order: 3;
   }
 
-  .comment__button {
-    order: 7;
-    width: 300px;
+  .comment__item--contacts .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 330px;
+    width: 140px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
-  .comment__item--emotion {
-    width: 648px;
-    order: 6;
+  .comment__item--contacts .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 330px;
+    width: 140px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
-  .comment__item--emotion textarea {
-    width: 570px;
+  .comment__item--contacts .comment__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+  }
+
+  .comment__item--contacts input {
+    width: 566px;
+  }
+
+  .comment__label--phone input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .comment__label--phone label::before {
+    content: "";
+    position: absolute;
+    top: 31px;
+    left: 586px;
+    z-index: 20;
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+  }
+
+  .comment__label--phone label::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 605px;
+    z-index: 20;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  .comment__label--email input {
+    margin-top: 7px;
+    margin-bottom: -30px;
+  }
+
+  .comment__label--email label::before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 586px;
+    z-index: 20;
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+  }
+
+  .comment__label--email label::after {
+    content: "";
+    position: absolute;
+    top: 52px;
+    left: 606px;
+    z-index: 20;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-mail.svg");
+  }
+
+  .comment__item.comment__item--sightseeing {
+    margin-bottom: 18px;
   }
 
   .comment__item--sightseeing {
@@ -441,24 +544,106 @@
     order: 5;
   }
 
+  .comment__item--sightseeing legend {
+    margin: 0 150px 52px 150px;
+  }
+
+  .comment__item--sightseeing .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 376px;
+    width: 122px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--sightseeing .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 376px;
+    width: 122px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
   .comment__item--sightseeing ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    margin-left: 65px;
   }
 
-  .comment__label {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .comment__item--sightseeing li {
+    display: inline-block;
+    width: 180px;
+    margin-bottom: 65px;
+  }
+
+  .comment__item--sightseeing:last-child,
+  .comment__item--sightseeing:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  .comment__check-box + label::before {
+    left: -80px;
+  }
+
+  .comment__check-box:checked + label::before {
+    left: -80px;
+  }
+
+  .comment__item--emotion {
+    width: 648px;
+    order: 6;
+    margin-top: 0;
+  }
+
+  .comment__item--emotion .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 310px;
+    width: 140px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--emotion .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 310px;
+    width: 140px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--emotion textarea {
+    width: 610px;
+    min-height: 136px;
+    margin: 39px auto 0 auto;
+    padding: 12px 20px;
+  }
+
+  .comment__button {
+    order: 7;
+    width: 322px;
+    margin-top: -22px;
+    margin-left: 0;
   }
 
   .comment__mark {
-    width: 200px;
+    display: inline-block;
+    .cancel();
+    width: 170px;
     font-size: 14px;
+    line-height: 26px;
     font-weight: normal;
     order: 8;
-    display: inline;
+    margin-top: -4px;
+    margin-left: auto;
   }
 }
 
@@ -478,46 +663,103 @@
   }
 
   .comment__form {
-    margin-top: 24px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 24px;
   }
 
-  .comment__form legend {
+  .comment__item legend {
     font-size: 22px;
   }
 
   .comment .comment__item--impression {
-    width: 400px;
-  }
-
-  .comment__item--impression li {
-    margin-left: -20px;
-    margin-bottom: 50px;
+    width: 477px;
   }
 
   .comment__item--impression legend {
-    margin-left: 0;
-    margin-bottom: 75px;
+    margin-left: 72px;
+    margin-bottom: 42px;
+  }
+
+  .comment__item--impression li {
+    margin-left: 70px;
+    margin-bottom: 52px;
   }
 
   .comment__item--name {
-    width: 400px;
+    width: 477px;
+    margin-bottom: 65px;
+    padding-left: 90px;
   }
 
   .comment__item--name legend {
+    margin-bottom: 58px;
     margin-left: 80px;
-    margin-bottom: 56px;
+    padding-left: 0;
   }
 
-  .comment__item--name ul {
+  .comment__item--name li {
+    margin-right: 0;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .comment__item--name li:last-child {
+    margin-bottom: 0;
+  }
+
+  .comment__item--name label {
     margin-left: 60px;
+    padding-right: 5px;
+    padding-top: 17px;
+    padding-left: 20px;
+    text-align: left;
+    align-items: center;
+  }
+
+  .comment__label--name input {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  .comment__label--surname input,
+  .comment__label--patronymic input {
+    width: 270px;
+    margin-bottom: 0;
+  }
+
+  .comment__item.comment__item--name {
+    margin-bottom: 0px;
+  }
+  
+  .comment__item.comment__item--contacts {
+    margin-top: 13px;
+    margin-bottom: 0;
   }
 
   .comment__item--contacts legend {
-    padding-top: 25px;
     margin-bottom: 65px;
+  }
+
+  .comment__item--contacts .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 348px;
+    width: 282px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--contacts .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 348px;
+    width: 282px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   .comment__item--contacts ul {
@@ -536,7 +778,63 @@
   }
 
   .comment__item--contacts label {
-    padding: 0 14px 0 0;
+    padding: 0;
+  }
+
+  .comment__item--contacts .comment__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 4px;
+  }
+
+  .comment__item--contacts label {
+    margin-top: 22px;
+    margin-right: 20px;
+  }
+  
+  .comment__label--phone label::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    left: 342px;
+    z-index: 20;
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+  }
+
+  .comment__label--phone label::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 366px;
+    z-index: 20;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  .comment__label--email label::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 420px;
+    z-index: 20;
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+  }
+
+  .comment__label--email label::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 442px;
+    z-index: 20;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-mail.svg");
   }
 
   .comment__phone {
@@ -544,31 +842,60 @@
   }
 
   .comment__item--contacts input {
-    width: 297px;
+    width: 235px;
   }
 
   .comment__form .comment__item--sightseeing {
     width: 964px;
-    margin-top: 8px;
+    margin-top: 28px;
+  }
+
+  .comment__item--sightseeing legend {
+    margin: 0 400px 57px 400px;
+  }
+
+  .comment__item--sightseeing .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 390px;
+    width: 290px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--sightseeing .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 390px;
+    width: 290px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   .comment__item--sightseeing ul {
+    width: 960px;
+    justify-content: space-between;
     padding-left: 0;
+    margin: 0 auto;
+  /*  margin-left: 65px;
+    margin-right: 65px;*/
   }
 
-  .comment__item--sightseeing li {
-    width: 110px;
-    margin-left: 70px;
+ .comment__item--sightseeing li {
+    width: 120px;
     padding: 0;
+    background-color: pink;
+  }
+  .comment__label--checkbox:last-of-type {
+    margin-left: 52px;
+    width: 128px;
   }
 
-  .comment__item--sightseeing li::last-of-type {
-    width: 124px;
-  }
-
-  .comment__item--sightseeing label {
+  .comment__label--checkbox label {
     padding: 0;
-    margin-left: 10px;
+    margin-left: 3px;
   }
 
   .comment__label--checkbox:last-of-type label {
@@ -577,15 +904,43 @@
     padding-right: 0;
   }
 
-  .comment__item--sightseeing legend {
-    margin: 0 300px 57px 300px;
-  }
-
   .comment__item--emotion {
     width: 964px;
   }
 
+.comment__item--emotion .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 348px;
+    width: 282px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--emotion .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 348px;
+    width: 282px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
   .comment__item--emotion textarea {
-    width: 870px;
+    width: 920px;
+    margin: 33px auto 2px auto;
+  }
+
+  .comment__button {
+    width: 480px;
+  }
+
+  .comment__mark {
+    margin-left: auto;
+  }
+  .comment {
+    margin-bottom: 85px;
   }
 }
