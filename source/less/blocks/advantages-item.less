@@ -21,7 +21,6 @@
 }
 
 .advantages-item__image {
-  margin-bottom: 0;
   vertical-align: bottom;
 }
 
@@ -52,12 +51,13 @@
 .advantages-item--beautiful-road .advantages-item__title,
 .advantages-item--little-tourists .advantages-item__title {
   padding-top: 24px;
-  padding-bottom: 10px;
   color: @black-color-title;
 }
 
+.advantages-item--small-square .advantages-item__description,
+.advantages-item--beautiful-road .advantages-item__description,
 .advantages-item--little-tourists .advantages-item__description {
-  padding-bottom: 30px;
+  color: @black-color-text;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -85,7 +85,6 @@
 
   .advantages-item--little-tourists .advantages-item__description {
     padding-bottom: 30px;
-    color: @black-color-text;
   }
 }
 
@@ -117,7 +116,6 @@
     flex-direction: row;
     width: 768px;
     height: 256px;
-    text-align: center;
   }
 
   .advantages-item__wrapper--real-city,
@@ -125,8 +123,8 @@
     width: 162px;
     padding-top: 44px;
     padding-right: 47px;
-    padding-left: 47px;
     padding-bottom: 20px;
+    padding-left: 47px;
   }
 
   .advantages-item__wrapper--diavols-bridge img {
@@ -154,10 +152,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .advantages-item__number {
-    padding-bottom: 22px;
-  }
-
   .advantages-item__image {
     width: 800px;
     height: 256px;
@@ -166,9 +160,6 @@
   .advantages-item--real-city,
   .advantages-item--diavols-bridge {
     width: 1200px;
-    height: 256px;
-    margin-left: 0;
-    text-align: center;
   }
 
   .advantages-item__wrapper--real-city .advantages-item__description {
@@ -187,24 +178,13 @@
     padding-top: 52px;
   }
 
-  .advantages-item--small-square .advantages-item__title,
-  .advantages-item--beautiful-road .advantages-item__title,
-  .advantages-item--little-tourists .advantages-item__title {
-    margin-bottom: 0;
-  }
-
   .advantages-item--small-square {
     width: 285px;
     margin-left: 5px;
   }
 
-  .advantages-item--beautiful-road .advantages-item__description br,
-  .advantages-item--little-tourists .advantages-item__description br {
-    display: none;
-  }
-
   .advantages-item--beautiful-road {
-    width: 262px;
+    width: 260px;
     margin-left: 85px;
   }
 
@@ -212,5 +192,10 @@
     width: 260px;
     margin-right: 20px;
     margin-left: 100px;
+  }
+
+  .advantages-item--beautiful-road .advantages-item__description br,
+  .advantages-item--little-tourists .advantages-item__description br {
+    display: none;
   }
 }

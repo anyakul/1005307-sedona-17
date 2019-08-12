@@ -1,6 +1,5 @@
 .advantages-additions {
   .cancel();
-  position: relative;
   margin-bottom: 18px;
   padding-left: 69px;
   text-align: left;
@@ -14,7 +13,7 @@
 
 .advantages-additions__title {
   .cancel();
-  padding-bottom: 13px;
+  margin-bottom: 13px;
   font-size: @title-font-size;
   line-height: 26px;
   color: @black-color-title;
@@ -76,18 +75,16 @@
     margin: 0 auto;
     margin-bottom: 42px;
     padding-left: 0;
-  }
-
-  .advantages-additions__item {
-    position: relative;
-    width: 156px;
-    padding-top: 160px;
-    padding-left: 0;
     text-align: center;
   }
 
+  .advantages-additions__item {
+    width: 156px;
+    padding-top: 160px;
+  }
+
   .advantages-additions__title {
-    padding-bottom: 21px;
+    margin-bottom: 21px;
     font-size: @title-font-size-tablet;
   }
 
@@ -101,37 +98,28 @@
   }
 
   .advantages-additions__item--accommodation::before {
-    content: "";
-    position: absolute;
     top: 60px;
     left: 40px;
     width: 75px;
     height: 72px;
-    background-image: url("../img/icon-house.svg");
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .advantages-additions__item--souvenirs::before {
-    content: "";
-    position: absolute;
     top: 55px;
     left: 50px;
     width: 64px;
     height: 75px;
-    background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .advantages-additions__item--meal::before {
-    content: "";
-    position: absolute;
     top: 55px;
     left: 43px;
     width: 77px;
     height: 72px;
-    background-image: url("../img/icon-burger.svg");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -139,58 +127,37 @@
 
 @media (min-width: @desktop-width) {
   .advantages-additions {
-    width: @container-desktop;
+    width: 1090px;
     margin-bottom: 62px;
     margin-left: 55px;
-    text-align: center;
   }
 
   .advantages-additions__item {
     width: 300px;
-    padding-top: 160px;
   }
 
   .advantages-additions__item--meal br {
     display: none;
   }
 
-  .advantages-additions__item .advantages-additions__description {
-    width: 300px;
-  }
-
   .advantages-additions__item--accommodation::before {
-    content: "";
-    position: absolute;
     top: 60px;
     left: 105px;
     width: 75px;
     height: 72px;
-    background-image: url("../img/icon-house.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   .advantages-additions__item--souvenirs::before {
-    content: "";
-    position: absolute;
     top: 56px;
     left: 110px;
     width: 64px;
     height: 75px;
-    background-image: url("../img/icon-gift.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   .advantages-additions__item--meal::before {
-    content: "";
-    position: absolute;
     top: 59px;
     left: 105px;
     width: 77px;
     height: 72px;
-    background-image: url("../img/icon-burger.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }
