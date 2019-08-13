@@ -71,10 +71,11 @@
   font-weight: bold;
   color: @black-color-title;
   background-color: @grey-color;
-  border: none;
+  border: 4px solid @grey-color;
 
   &:hover {
     background-color: @grey-color-hover;
+    border: 4px solid @grey-color-hover;
     outline: none;
   }
 
@@ -88,7 +89,7 @@
 }
 
 .comment__label input {
-  height: 58px;
+  height: 50px;
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -166,12 +167,12 @@
 .comment__label--email label::before {
   content: "";
   position: absolute;
-  top: 30px;
+  top: 29px;
   left: 221px;
   z-index: 20;
   width: 58px;
   height: 58px;
-  background-color: @grey-color-bg-icon
+  background-color: @grey-color-bg-icon;
 }
 
 .comment__label--email label::after {
@@ -217,7 +218,7 @@
 
 .comment__item--impression label,
 .comment__item--sightseeing label {
-  font-size: 18px;
+  font-size: @title-font-size;
 }
 
 .comment__radio + label::before {
@@ -389,8 +390,8 @@
     left: -63px;
     width: 55px;
     height: 55px;
-    border-radius: 50%;
     background-color: @grey-color;
+    border-radius: 50%;
   }
 
   .comment__radio:checked + label::after {
@@ -400,8 +401,8 @@
     left: -45px;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
     background-color: @black-color-text;
+    border-radius: 50%;
   }
 
   .comment__item--name {
@@ -427,17 +428,17 @@
   }
 
   .comment__item--name label {
+    flex-grow: 1;
     margin-left: 60px;
     padding-right: 5px;
     padding-top: 17px;
     text-align: left;
-    flex-grow: 1;
     align-items: center;
   }
 
   .comment__item--name input {
-    width: 150px;
     flex-grow: 2;
+    width: 150px;
     margin-bottom: 0;
     order: 2;
   }
@@ -445,6 +446,9 @@
   .comment .comment__item--contacts {
     width: 640px;
     padding-bottom: 0;
+    text-align: left;
+    position: static;
+    left: 0;
     order: 3;
   }
 
@@ -569,7 +573,7 @@
   .comment__item--sightseeing ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     margin-left: 65px;
   }
 
@@ -634,16 +638,16 @@
   }
 
   .comment__mark {
-    display: inline-block;
     .cancel();
+    display: inline-block;
     width: 320px;
+    margin-top: -4px;
+    margin-left: auto;
     text-align: right;
     font-size: 14px;
     line-height: 26px;
     font-weight: normal;
     order: 8;
-    margin-top: -4px;
-    margin-left: auto;
   }
 }
 
@@ -651,6 +655,7 @@
   .comment {
     width: 964px;
     margin: 0 auto;
+    margin-bottom: 85px;
     padding-top: 10px;
   }
 
@@ -730,7 +735,7 @@
   }
 
   .comment__item.comment__item--name {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .comment__item.comment__item--contacts {
@@ -763,19 +768,15 @@
   }
 
   .comment__item--contacts ul {
-    width: 964px;
     .cancel();
+    width: 964px;
     display: flex;
     justify-content: center;
   }
 
   .comment__item--contacts li {
-    width: 482px;
     .cancel();
-  }
-
-  .comment__item--contacts label {
-    padding: 0;
+    width: 482px;
   }
 
   .comment__item--contacts .comment__label {
@@ -788,6 +789,7 @@
   .comment__item--contacts label {
     margin-top: 22px;
     margin-right: 20px;
+    padding: 0;
   }
 
   .comment__label--phone label::before {
@@ -935,9 +937,5 @@
   .comment__mark {
     width: 480px;
     margin-left: auto;
-  }
-
-  .comment {
-    margin-bottom: 85px;
   }
 }

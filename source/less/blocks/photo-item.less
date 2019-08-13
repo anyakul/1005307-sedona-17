@@ -19,6 +19,11 @@
   vertical-align: bottom;
 }
 
+.photo-item__info {
+  display: flex;
+  flex-direction: column;
+}
+
 .photo-item__info--big,
 .photo-item__info--small {
   padding-top: 15px;
@@ -34,12 +39,14 @@
 .photo-item__author {
   .cancel();
   text-transform: none;
+  color: @black-color-text;
 }
 
 .photo-item__like {
   position: relative;
   padding-left: 35px;
   font-weight: bold;
+  color: @black-color-title;
 }
 
 .photo-item__like-number {
@@ -52,7 +59,6 @@
   bottom: 17px;
   left: 0;
   z-index: 2;
-  display: block;
   width: 23px;
   height: 21px;
   cursor: pointer;
@@ -80,17 +86,11 @@
 
   .photo-item--big {
     width: 648px;
-    margin-left: 60px;
-    text-align: left;
+    margin: 0 auto;
   }
 
   .photo-item--small {
     width: 324px;
-    margin-left: 0;
-  }
-
-  .photo-item--small:not(:nth-child(2n)) {
-    margin-left: 60px;
   }
 
   .photo-item__image--big {
@@ -116,39 +116,13 @@
     background-color: @grey-color-photos;
   }
 
-  .photo-item__info--big {
-    width: 608px;
-  }
-
-  .photo-item__info--small {
-    width: 284px;
-  }
-
-  .photo-item__info--big .photo-item__like-button {
-    position: absolute;
+  .photo-item__info .photo-item__like-button {
     top: -4px;
-    left: 0;
-    z-index: 2;
-    display: block;
-    width: 23px;
-    height: 21px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
   }
 
-  .photo-item__info--small .photo-item__like-button {
-    top: -4px;
-    left: 0;
-  }
-
-  .photo-item__info--big .photo-item__like-number {
-    padding-bottom: 14px;
-  }
-
-  .photo-item__info--small .photo-item__like-number {
-    padding-bottom: 13px;
+  .photo-item__info .photo-item__like-number {
     padding-right: 12px;
+    padding-bottom: 13px;
   }
 }
 
@@ -156,19 +130,11 @@
   .photo-item--big {
     width: 1200px;
     margin-left: 0;
-    position: relative;
+    margin-bottom: 0;
   }
 
   .photo-item--small {
     width: 400px;
-    margin-left: 0;
-  }
-
-  .photo-item--small:first-child,
-  .photo-item--small:nth-child(3n),
-  .photo-item--small:not(:nth-child(2n)),
-  .photo-item--small {
-    margin-right: 0;
     margin-left: 0;
   }
 
@@ -185,78 +151,45 @@
   .photo-item__info {
     position: relative;
     z-index: 20;
-    width: 360px;
-    min-height: 48px;
-    margin-top: -75px;
+    min-height: 56px;
+    margin-top: -78px;
     padding-top: 11px;
+    padding-bottom: 11px;
     background-color: rgba(0, 0, 0, 0.3);
     border: none;
-  }
-  
-    .photo-item__info--big {
-    width: 1200px;
   }
 
   .photo-item:nth-child(2n) .photo-item__info {
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  .photo-item__author-name,
-  .photo-item__like {
-    position: absolute;
-    padding-right: 40px;
-    color: @white-color;
-  }
-
-  .photo-item__name {
-    color: @white-color;
-  }
-
   .photo-item__author-name {
-    padding-right: 45px;
+    padding-right: 40px;
+  }
+
+  .photo-item__name,
+  .photo-item__author {
     color: @white-color;
   }
 
-  .photo-item--big .photo-item__like-number {
-    position: relative;
-    padding-top: 13px;
-    padding-left: 1090px;
+  .photo-item__like {
+    color: @white-color;
   }
 
-  .photo-item--small .photo-item__like-number {
-    padding-top: 13px;
-    padding-left: 290px;
+  .photo-item__info .photo-item__like-number {
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-left: 0;
   }
 
-  .photo-item--big .photo-item__like-button {
-    position: absolute;
-    top: -1px;
-    left: 1095px;
-    z-index: 2;
-    width: 23px;
-    height: 21px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-  }
-
-  .photo-item--small .photo-item__like-button {
-    position: absolute;
-    top: -1px;
-    left: 295px;
-    z-index: 2;
-    width: 23px;
-    height: 21px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
+  .photo-item__info .photo-item__like-button {
+    top: 0;
   }
 
   .photo-item__like-button::before {
     content: "";
     position: absolute;
-    top: 12px;
-    left: 0;
+    top: 15px;
     width: 23px;
     height: 21px;
     background-image: url("../img/icon-like-desktop.svg");
