@@ -40,6 +40,11 @@
   width: 320px;
   height: 350px;
   background-image: url("../img/bg-map-mobile@1x.jpg");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 .find-accommodation__map::before {
@@ -66,7 +71,7 @@
 
 @media (min-width: @tablet-width) {
   .find-accommodation {
-    margin-bottom: 15px;
+    margin-bottom: 3px;
     padding-top: 30px;
   }
 
@@ -89,6 +94,10 @@
   .find-accommodation__map {
     width: 768px;
     background-image: url("../img/bg-map-tablet@1x.jpg");
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+      background-size: 768px auto;
+    }
   }
 
   .find-accommodation__map::before {
@@ -118,6 +127,10 @@
   .find-accommodation__map {
     width: 1200px;
     background-image: url("../img/bg-map-desktop@1x.jpg");
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 
   .find-accommodation__map-interactive {
