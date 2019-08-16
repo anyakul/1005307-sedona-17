@@ -3,17 +3,14 @@
   margin-bottom: 56px;
 }
 
-.page-header__logo {
+.page-header__logo img {
   position: absolute;
-  bottom: -88px;
+  bottom: -82px;
   left: 109px;
   z-index: 2;
-  background-color: transparent;
-}
-
-.page-header__logo-image {
   width: 102px;
   height: 83px;
+  background-color: transparent;
 }
 
 @media (min-width: @tablet-width) {
@@ -21,16 +18,16 @@
     margin-bottom: 0;
   }
 
-  .page-header__logo {
-    position: absolute;
+  .page-header__logo img {
     top: 0;
     left: 333px;
   }
 }
 
-@media (min-width: 1200px) {
-  .page-header__logo {
-    left: 550px;
+@media (min-width: @desktop-width) {
+  .page-header__logo img {
+    left: 505px;
+    width: 188px;
+    height: 100px;
   }
 }
- 

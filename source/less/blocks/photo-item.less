@@ -1,7 +1,10 @@
 .photo-item {
+  .container();
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding-top: 22px;
-  padding-bottom: 18px;
+  padding-bottom: 17px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -9,18 +12,20 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.photo-item__wrapper {
-  .container();
-  position: relative;
-}
-
-.photo-item__image {
+.photo-item__image--big,
+.photo-item__image--small {
   width: 280px;
   margin: 0 auto;
   vertical-align: bottom;
 }
 
 .photo-item__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-item__info--big,
+.photo-item__info--small {
   padding-top: 15px;
 }
 
@@ -29,25 +34,31 @@
   font-weight: bold;
   font-size: 14px;
   color: @black-color-title;
-  width: 149px;
 }
 
 .photo-item__author {
   .cancel();
   text-transform: none;
+  color: @black-color-text;
 }
 
 .photo-item__like {
+  position: relative;
   padding-left: 35px;
   font-weight: bold;
+  color: @black-color-title;
+}
+
+.photo-item__like-number {
+  .cancel();
+  padding-top: 8px;
 }
 
 .photo-item__like-button {
   position: absolute;
-  bottom: 20px;
+  bottom: 17px;
   left: 0;
   z-index: 2;
-  display: block;
   width: 23px;
   height: 21px;
   cursor: pointer;
@@ -66,92 +77,122 @@
   opacity: 0.3;
 }
 
-.photo-item__like-number {
-  .cancel();
-  padding-top: 8px;
-}
-
-@media (min-width: 768px) {
-  .photo-item--big {
-    margin-top: 21px;
-    border-top: none;
-    margin-bottom: 0;
-  }
-  
+@media (min-width: @tablet-width) {
   .photo-item {
+    .cancel();
     border-top: none;
-    padding-bottom: 0;
-    padding-top: 0;
-    margin: 0;
-    margin-bottom: 0;
+    border-bottom: none;
   }
-  
-  .photo-item__like-button {
-    position: absolute;
-    bottom: 30px;
-    left: 200px;
-    z-index: 2;
-    display: block;
-    width: 23px;
-    height: 21px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
+
+  .photo-item--big {
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .photo-item--small {
+    width: 324px;
+  }
+
+  .photo-item__image--big {
+    width: 648px;
+    height: 400px;
+  }
+
+  .photo-item__image--small {
+    width: 324px;
   }
 
   .photo-item__info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: @grey-color;
-    padding-left: 25px;
     padding-right: 20px;
+    padding-bottom: 17px;
+    padding-left: 20px;
+    background-color: @grey-color;
   }
-  
-  .photo-item:nth-child(2n) {
+
+  .photo-item--small:nth-child(2n) .photo-item__info {
     background-color: @grey-color-photos;
+  }
+
+  .photo-item__info .photo-item__like-button {
+    top: -4px;
+  }
+
+  .photo-item__info .photo-item__like-number {
+    padding-right: 12px;
+    padding-bottom: 13px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .photo-item__image {
-    position: relative;
+  .photo-item--big {
+    width: 1200px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .photo-item--small {
+    width: 400px;
+    margin-left: 0;
+  }
+
+  .photo-item__image--big {
+    width: 1200px;
+    height: 400px;
+  }
+
+  .photo-item__image--small {
+    width: 400px;
+    height: 267px;
   }
 
   .photo-item__info {
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    width: 280px;
-    height: 80px;
-    padding-top: 0;
-    background-color: #000000;
+    position: relative;
+    z-index: 20;
+    min-height: 56px;
+    margin-top: -78px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: rgba(0, 0, 0, 0.3);
     border: none;
-    opacity: 0.6;
   }
-  
-  .photo-item__author-name,
-  .photo-item__like {
-    position: absolute;
-    z-index: 100;
-    opacity: 1;
+
+  .photo-item:nth-child(2n) .photo-item__info {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .photo-item__author-name {
+    padding-right: 40px;
+  }
+
+  .photo-item__name,
+  .photo-item__author {
     color: @white-color;
   }
-  
-  .photo-item__author {
-    padding-left: 25px;
+
+  .photo-item__like {
+    color: @white-color;
   }
-  
+
+  .photo-item__info .photo-item__like-number {
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-left: 0;
+  }
+
+  .photo-item__info .photo-item__like-button {
+    top: 0;
+  }
+
   .photo-item__like-button::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: 0;
-  width: 23px;
-  height: 21px;
-  background-image: url("../img/icon-like-desktop.svg");
-  opacity: 1;
-}
+    content: "";
+    position: absolute;
+    top: 15px;
+    width: 23px;
+    height: 21px;
+    background-image: url("../img/icon-like-desktop.svg");
+    opacity: 1;
+  }
 }

@@ -1,14 +1,134 @@
 .modal-comment {
+  position: fixed;
+  top: 50px;
+  z-index: 100;
+  width: 320px;
+  margin: 0 auto;
   text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
 .modal-comment__title {
+  margin-top: 46px;
+  margin-bottom: 40px;
   font-size: @title-font-size;
   font-weight: bold;
   line-height: 26px;
 }
 
 .modal-comment__description {
+  width: 207px;
+  margin: 0 auto;
+  margin-bottom: 30px;
   line-height: 24px;
   color: #333333;
+}
+
+.modal-comment__button {
+  width: 180px;
+  margin-bottom: 35px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  font-size: @title-font-size;
+  text-transform: uppercase;
+  background-color: @blue-color;
+}
+
+.modal-comment--sent .modal-comment__description {
+  width: 240px;
+}
+
+.modal-comment--sent .modal-comment__button {
+  width: 280px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-comment--error,
+.modal-comment--sent {
+  display: none;
+}
+
+.modal-show {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-comment {
+    left: 30%;
+    width: 400px;
+  }
+
+  .modal-comment__title {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 65px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal-comment__title br {
+    display: none;
+  }
+
+  .modal-comment__description {
+    width: 300px;
+  }
+
+  .modal-comment__button {
+    width: 270px;
+    margin-bottom: 35px;
+    font-size: @title-font-size-tablet;
+    font-weight: bold;
+  }
+
+  .modal-comment--sent {
+    left: 15%;
+    width: 647px;
+  }
+
+  .modal-comment--sent .modal-comment__title {
+    width: 414px;
+  }
+
+  .modal-comment--sent .modal-comment__description {
+    width: 420px;
+    margin-bottom: 40px;
+  }
+
+  .modal-comment__bg-buttons {
+    background-color: @grey-color;
+  }
+
+  .modal-comment--sent .modal-comment__button {
+    width: 458px;
+    margin-top: 44px;
+    margin-bottom: 44px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal-comment {
+    left: 35%;
+  }
+
+  .modal-comment__description {
+    margin-bottom: 40px;
+  }
+
+  .modal-comment__button {
+    margin-bottom: 50px;
+  }
+
+  .modal-comment--sent {
+    left: 27%;
+    width: 647px;
+  }
+
+  .modal-comment--sent .modal-comment__button {
+    width: 458px;
+  }
 }

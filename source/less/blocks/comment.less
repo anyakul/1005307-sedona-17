@@ -1,387 +1,948 @@
-
 .comment,
 .comment__title {
   .cancel();
-  font-size: 18px;
+  font-size: @title-font-size;
   font-weight: bold;
   line-height: 26px;
 }
+
 .comment {
-  text-align: center;  
   width: 320px;
-  margin: 0 auto;
-  padding-top: 40px;   
+  margin-bottom: 73px;
+  padding-top: 40px;
+  text-align: center;
 }
+
 .comment__title {
   margin-bottom: 27px;
 }
 
 .comment__description {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  padding-bottom: 14px;
   margin-bottom: 0;
-  border-bottom: 1px solid black;
+  padding-bottom: 14px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .comment__form {
-  padding-top: 20px;    
-}
- 
-.comment fieldset {
-     .cancel();
-     border: none;
-     text-align: left;
+  padding-top: 20px;
 }
 
-.comment fieldset {
-	padding-top: 20px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid black;
+.comment__form fieldset {
+  .cancel();
+  margin-bottom: 18px;
+  padding-bottom: 5px;
+  text-align: left;
+  border: 0 none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.comment legend {
+.comment__item legend {
+  margin: 0 auto;
+  margin-bottom: 20px;
   padding-left: 0;
-	margin: 0 auto;
-  
 }
 
-.comment__item  ul,
+.comment__item ul,
 .comment__item li {
-	.cancel();
-  
-}
-.comment__item  ul {
-  padding-left: 20px;
-  padding-bottom: 12px;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  list-style: none;
 }
 
-/*.comment__item--name ul
- {
-  padding-bottom: 25px;
-}*/
-.comment__item--contacts ul {
-padding-bottom: 30px;}
-.comment__item--name li,
-.comment__item--contacts li {
-	margin-bottom: 20px;
-}
-
-.comment__item--name li:last-of-type,
-.comment__item--contacts li:last-of-type {
-  margin-bottom: 0;
-}
-.comment__item--name {
-  margin-bottom: 40px;
-}
 .comment__label {
   font-size: 14px;
   font-weight: normal;
-  color: #333333;
-  margin-bottom: 40px;
+  color: @black-color-text;
 }
 
-.comment__label--radio,
-.comment__label--checkbox {
-	font-weight: bold;
-	color: #000000;
+.comment__label label {
+  .cancel();
+  padding-right: 10px;
 }
 
 .comment__label input,
 .comment__textarea {
-  font-size: 18px;
+  padding: 5px;
+  font-size: @title-font-size;
   font-weight: bold;
-  color: #000000;
-  background-color: #f2f2f2;
-  border: none;
-}
+  color: @black-color-title;
+  background-color: @grey-color;
+  border: 4px solid @grey-color;
 
-.comment__label  label {
-  .cancel();
-	padding-right: 8px;     
+  &:hover {
+    background-color: @grey-color-hover;
+    border: 4px solid @grey-color-hover;
+    outline: none;
+  }
+
+  &:active,
+  &:focus {
+    height: 50px;
+    background-color: @white-color;
+    border: 4px solid @grey-color-hover;
+    outline: none;
+  }
 }
 
 .comment__label input {
-  .cancel();
-	height: 58px;
-	padding-left: 22px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  list-style: none;
 }
+
+.comment__label--radio,
+.comment__label--checkbox {
+  font-weight: bold;
+  color: @black-color-title;
+  text-transform: none;
+}
+
+.comment__item--name li {
+  margin-bottom: 20px;
+}
+
 .comment__label--name input {
   width: 208px;
 }
 
 .comment__label--surname input {
-	width: 170px;	 	
-}
-.comment__label--patronymic input {
-	width: 176px;	 	
+  width: 170px;
 }
 
-.comment__item--contacts label  {
-	padding-left: 20px;
-  margin-bottom: 100px;
+.comment__label--patronymic input {
+  width: 176px;
+}
+
+.comment__item--contacts li {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment__item--contacts label {
+  position: relative;
+  padding-left: 20px;
 }
 
 .comment__item--contacts input {
-	width: 254px;
-  position: relative;
-	padding-left: 20px;
-  padding-top: 10px;
-  height: 48px;
+  width: 222px;
+  padding-left: 20px;
 }
 
-.comment fieldset:nth-of-type(2) {
-  margin-bottom: 32px;
+.comment__label--phone input {
+  margin-top: 5px;
 }
+
+.comment__label--email input {
+  margin-top: 7px;
+  margin-bottom: 6px;
+}
+
+.comment__label--phone label::before {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 222px;
+  z-index: 20;
+  width: 58px;
+  height: 58px;
+  background-color: @grey-color-bg-icon;
+}
+
+.comment__label--phone label::after {
+  content: "";
+  position: absolute;
+  top: 47px;
+  left: 242px;
+  z-index: 20;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icon-phone.svg");
+}
+
+.comment__label--email label::before {
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: 221px;
+  z-index: 20;
+  width: 58px;
+  height: 58px;
+  background-color: @grey-color-bg-icon;
+}
+
+.comment__label--email label::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 242px;
+  z-index: 20;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icon-mail.svg");
+}
+
 .comment__item--impression legend {
-	margin-bottom:40px;
+  margin-bottom: 40px;
+}
+
+.comment__item--sightseeing legend {
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .comment__item--impression li,
 .comment__item--sightseeing li {
-	margin-left: 80px;
-	margin-bottom: 40px;
-	width: 195px;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 40px;
+  margin-left: 80px;
+}
+
+.comment__item--impression li:last-child {
+  margin-bottom: 36px;
+}
+
+.comment__item--sightseeing li {
+  margin-bottom: 54px;
+  margin-left: 80px;
+  text-align: left;
+}
+
+.comment__item--sightseeing li:last-of-type {
+  margin-bottom: 32px;
 }
 
 .comment__item--impression label,
 .comment__item--sightseeing label {
-  font-size: 18px;
+  font-size: @title-font-size;
 }
 
 .comment__radio + label::before {
   content: "";
   position: absolute;
-  top: -12px;
-	left: -81px;
+  top: -16px;
+  left: -70px;
   width: 55px;
   height: 55px;
-	border-radius: 50%;
-  background-color: #f2f2f2;
-}
- .comment__radio:checked + label::after {
-   content: "";
-   position: absolute;
-   top: 5px;
-	 left: -62px;
-   width: 20px;
-   height: 20px;
-	 border-radius: 50%;
-   background-color: #333333;
+  background-color: @grey-color;
+  border-radius: 50%;
 }
 
-.comment .comment__item--sightseeing {
-	text-align: center;
-}
-
-.comment__item--sightseeing legend{
-  margin-bottom: 30px;
-}
-.comment__item--sightseeing li {
-  text-align: left;
-  margin-bottom: 52px;
-  margin-left: 80px;
-}
-.comment__check-box + label::before  {
+.comment__radio:checked + label::after {
   content: "";
   position: absolute;
-  top: -10px;
-	left: -80px;
+  top: 1px;
+  left: -52px;
+  width: 20px;
+  height: 20px;
+  background-color: @black-color-text;
+  border-radius: 50%;
+}
+
+.comment__check-box + label::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -70px;
   width: 55px;
   height: 55px;
-  background-color: #f2f2f2;
+  background-color: @grey-color;
 }
 
 .comment__check-box:checked + label::before {
   content: "";
   position: absolute;
-  top: -10px;
-	left: -80px;
+  top: -12px;
+  left: -70px;
   width: 55px;
   height: 55px;
   background-image: url("../img/icon-tick.svg");
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
-.comment__label--checkbox,
-.comment__label--radio {
-  text-transform: none;
+.comment__item--emotion {
+  padding: 0 20px;
 }
-.comment fieldset:nth-of-type(4) {
-  margin-bottom: 5px;
-}
+
 .comment__textarea {
-	margin-top: 20px;
-	height: 160px;
-	width: 265px;
+  width: 240px;
+  min-height: 136px;
+  margin: 0 20px;
+  padding: 12px 20px;
+  line-height: 26px;
 }
 
 .comment__button {
+  margin-top: 18px;
+  padding: 16px 47px;
   font-size: 21px;
   line-height: 26px;
+  text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #81b3d2;
-  border: none;
-  width: 100%;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.comment__button:hover,
-.comment__button:focus {
-  background-color: #669ec0;
-}
-
-.comment__button:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #5496bd;
-}
-
-.modal-comment {
-  text-align: center;
-}
-
-.modal-comment__title {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 26px;
-}
-
-.modal-comment__description {
-  line-height: 24px;
-  color: #333333;
-}
-
-@media (min-width: 768px) {
-	.comment {
-		width: 648px;
-	}
-	.comment__title {
-		font-size: 30px;
-	}
-	.comment__description {
-		margin-left: 105px;
-		margin-right: 105px;
-		margin-bottom: 50px;
-	}
-	.comment__form {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-	.comment__item  {
-		width: 320px;		 
-	}
-	
-  .comment fieldset {
+  color: @white-color;
+  background-color: @blue-color;
   border: none;
 }
-	 .comment .comment__item--impression {
-		 width: 320px;
-		 order: 1;
-		 border-right: 1px solid black; 
-	}
-	 
-	 .comment__item--impression legend,
-	 .comment__item--name legend{
-		 margin-left: 0;
-	}
-	.comment__item--name  {
-		width: 320px;
-		order: 2;
-	}
-	.comment__item--contacts{
-		width: 640px;
-		order: 3;
-	}
-	.comment__item--contacts input {
-		width: 626px;
-	}
-	.comment__button {
-		order: 7;
-		width: 300px;
-	}
-	.comment__item--emotion {
-		width: 648px;
-		order: 6;   		
-	}
-	.comment__item--emotion textarea {
-		width: 644px;
-	}
-	.comment__item--sightseeing {
-		width: 648px;
-		order: 5;
-	}
-  
-	.comment__item--sightseeing ul {
-		display: flex;
+
+.comment__mark {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .comment {
+    width: 648px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    padding-top: 20px;
+  }
+
+  .comment__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  .comment__description {
+    margin: 5px 105px;
+    border-bottom: none;
+  }
+
+  .comment__form {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;	
-	}
-  
-	.comment__item--sightseeing li {
-		width: 250px;
-	}
-	.comment__mark {
-		width: 200px;
-		font-size: 14px;
-		font-weight: normal;
-		order: 8;
-	}
+    justify-content: center;
+    margin-top: 40px;
+    padding-left: 0;
+  }
+
+  .comment__form fieldset {
+    margin-bottom: 70px;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  .comment__item {
+    padding-bottom: 0;
+  }
+
+  .comment__legend {
+    position: relative;
+    font-size: @title-font-size-tablet;
+  }
+
+  .comment__item ul,
+  .comment__item li {
+    padding-left: 0;
+  }
+
+  .comment__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .comment__label:last-child {
+    padding-bottom: 0;
+  }
+
+  .comment .comment__item--impression {
+    width: 322px;
+    padding-top: 32px;
+    text-align: left;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    order: 1;
+  }
+
+  .comment__item--impression legend {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .comment__item--impression li {
+    position: relative;
+    margin-left: 63px;
+    margin-bottom: 52px;
+  }
+
+  .comment__item--impression li:last-child {
+    margin-bottom: 0;
+  }
+
+  .comment__label--radio input {
+    .cancel();
+  }
+
+  .comment__label--radio label {
+    margin-left: 0;
+    padding-left: 6px;
+    left: 0;
+  }
+
+  .comment__radio + label::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -63px;
+    width: 55px;
+    height: 55px;
+    background-color: @grey-color;
+    border-radius: 50%;
+  }
+
+  .comment__radio:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -45px;
+    width: 20px;
+    height: 20px;
+    background-color: @black-color-text;
+    border-radius: 50%;
+  }
+
+  .comment__item--name {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    padding-left: 70px;
+    order: 2;
+  }
+
+  .comment__item--name legend {
+    margin-bottom: 58px;
+    margin-left: 55px;
+    padding-left: 0;
+  }
+
+  .comment__item--name li {
+    margin-right: 0;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .comment__item--name li:last-child {
+    margin-bottom: 0;
+  }
+
+  .comment__item--name label {
+    flex-grow: 1;
+    margin-left: 60px;
+    padding-right: 5px;
+    padding-top: 17px;
+    text-align: left;
+    align-items: center;
+  }
+
+  .comment__item--name input {
+    flex-grow: 2;
+    width: 150px;
+    margin-bottom: 0;
+    order: 2;
+  }
+
+  .comment .comment__item--contacts {
+    width: 640px;
+    padding-bottom: 0;
+    text-align: left;
+    position: static;
+    left: 0;
+    order: 3;
+  }
+
+  .comment__item--contacts .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 330px;
+    width: 140px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--contacts .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 330px;
+    width: 140px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--contacts .comment__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+  }
+
+  .comment__item--contacts input {
+    width: 566px;
+  }
+
+  .comment__label--phone input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .comment__label--phone label::before {
+    content: "";
+    position: absolute;
+    top: 31px;
+    left: 586px;
+    z-index: 20;
+    width: 58px;
+    height: 58px;
+    background-color: @grey-color-bg-icon;
+  }
+
+  .comment__label--phone label::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 605px;
+    z-index: 20;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  .comment__label--email input {
+    margin-top: 7px;
+    margin-bottom: -30px;
+  }
+
+  .comment__label--email label::before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 586px;
+    z-index: 20;
+    width: 58px;
+    height: 58px;
+    background-color: @grey-color-bg-icon;
+  }
+
+  .comment__label--email label::after {
+    content: "";
+    position: absolute;
+    top: 52px;
+    left: 606px;
+    z-index: 20;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-mail.svg");
+  }
+
+  .comment__item.comment__item--sightseeing {
+    margin-bottom: 18px;
+  }
+
+  .comment__item--sightseeing {
+    width: 648px;
+    order: 5;
+  }
+
+  .comment__item--sightseeing legend {
+    margin: 0 150px 52px 150px;
+  }
+
+  .comment__item--sightseeing .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 376px;
+    width: 122px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--sightseeing .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 376px;
+    width: 122px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--sightseeing ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 65px;
+  }
+
+  .comment__item--sightseeing li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 180px;
+    margin-bottom: 65px;
+  }
+
+
+  .comment__check-box + label::before {
+    left: -80px;
+  }
+
+  .comment__check-box:checked + label::before {
+    left: -80px;
+  }
+
+  .comment__item--emotion {
+    width: 648px;
+    order: 6;
+    margin-top: 0;
+  }
+
+  .comment__item--emotion .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 310px;
+    width: 140px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--emotion .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 310px;
+    width: 140px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--emotion textarea {
+    width: 610px;
+    min-height: 136px;
+    margin: 39px auto 0 auto;
+    padding: 12px 20px;
+  }
+
+  .comment__button {
+    order: 7;
+    width: 322px;
+    margin-top: -22px;
+    margin-left: 0;
+    left: 0;
+  }
+
+  .comment__mark {
+    .cancel();
+    display: inline-block;
+    width: 320px;
+    margin-top: -4px;
+    margin-left: auto;
+    text-align: right;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: normal;
+    order: 8;
+  }
 }
 
 @media (min-width: 1200px) {
   .comment {
-	  width: 942px;
-	}
-  
-	.comment__description {
-		margin-left: 251px;
-		margin-right: 251px;	 
-	}
-  
-	.comment .comment__item--impression {
-		width: 450px;		 
-	}
-	 
-	.comment__item--name  {
-		width: 470px;	 
-	}
-	
-	.comment__item--contacts ul {
-		width: 942px;
+    width: 964px;
+    margin: 0 auto;
+    margin-bottom: 85px;
+    padding-top: 10px;
+  }
+
+  .comment__title {
+    margin-bottom: 30px;
+  }
+
+  .comment__description {
+    margin: 2px 260px;
+  }
+
+  .comment__form {
     display: flex;
-    justify-content: space-between;		
-	}
-	
-	.comment__item--contacts li {
-		width: 450px;
-		margin-right: 10px;
-	}
-	
-	.comment__item--contacts input {
-		width: 207px;
-	}
-	.comment__label--email label {
-		padding-right: 23px;
-	}
-	 
-	.comment__item--emotion {
-		width: 942px;		   		
-	}
-	.comment__item--emotion textarea {
-		width: 936px;
-	}
-	.comment__item--sightseeing {
-		width: 942px;        	
-	}
-	 
-	 .comment__item--sightseeing li {
-		width: 180px;
-	}	 
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .comment__item legend {
+    font-size: 22px;
+  }
+
+  .comment .comment__item--impression {
+    width: 477px;
+  }
+
+  .comment__item--impression legend {
+    margin-bottom: 42px;
+    margin-left: 72px;
+  }
+
+  .comment__item--impression li {
+    margin-bottom: 52px;
+    margin-left: 70px;
+  }
+
+  .comment__item--name {
+    width: 477px;
+    margin-bottom: 65px;
+    padding-left: 90px;
+  }
+
+  .comment__item--name legend {
+    margin-bottom: 58px;
+    margin-left: 80px;
+    padding-left: 0;
+  }
+
+  .comment__item--name li {
+    margin-right: 0;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .comment__item--name li:last-child {
+    margin-bottom: 0;
+  }
+
+  .comment__item--name label {
+    margin-left: 60px;
+    padding-top: 17px;
+    padding-right: 5px;
+    padding-left: 20px;
+    text-align: left;
+    align-items: center;
+  }
+
+  .comment__label--name input {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  .comment__label--surname input,
+  .comment__label--patronymic input {
+    width: 270px;
+    margin-bottom: 0;
+  }
+
+  .comment__item.comment__item--name {
+    margin-bottom: 0;
+  }
+
+  .comment__item.comment__item--contacts {
+    margin-top: 13px;
+    margin-bottom: 0;
+  }
+
+  .comment__item--contacts legend {
+    margin-bottom: 65px;
+  }
+
+  .comment__item--contacts .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 348px;
+    width: 282px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--contacts .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 348px;
+    width: 282px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment .comment__item--contacts {
+    width: 964px;
+  }
+
+  .comment__item--contacts ul {
+    .cancel();
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .comment__item--contacts li {
+    .cancel();
+    width: 482px;
+  }
+
+  .comment__item--contacts .comment__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 4px;
+  }
+
+  .comment__item--contacts label {
+    margin-top: 22px;
+    margin-right: 20px;
+    padding: 0;
+  }
+
+  .comment__label--phone label::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    left: 342px;
+    z-index: 20;
+    width: 58px;
+    height: 58px;
+    background-color: @grey-color-bg-icon;
+  }
+
+  .comment__label--phone label::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 366px;
+    z-index: 20;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  .comment__label--email label::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 420px;
+    z-index: 20;
+    width: 58px;
+    height: 58px;
+    background-color: @grey-color-bg-icon;
+  }
+
+  .comment__label--email label::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 442px;
+    z-index: 20;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-mail.svg");
+  }
+
+  .comment__phone {
+    display: none;
+  }
+
+  .comment__item--contacts input {
+    width: 235px;
+  }
+
+  .comment__form .comment__item--sightseeing {
+    width: 964px;
+    margin: 28px auto 0 auto;
+  }
+
+  .comment__item--sightseeing legend {
+    margin: 0 320px 57px 320px;
+  }
+
+  .comment__item--sightseeing .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 360px;
+    width: 290px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--sightseeing .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 360px;
+    width: 290px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--sightseeing ul {
+    width: 960px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .comment__item--sightseeing li {
+    width: 120px;
+    padding: 0;
+  }
+
+  .comment__label--checkbox:last-of-type {
+    width: 128px;
+    margin-left: 52px;
+  }
+
+  .comment__label--checkbox label {
+    margin-left: 3px;
+    padding: 0;
+  }
+
+  .comment__label--checkbox:last-of-type label {
+    padding: 0;
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  .comment__item--emotion {
+    width: 964px;
+  }
+
+  .comment__item--emotion .comment__legend::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 348px;
+    width: 282px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--emotion .comment__legend::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 348px;
+    width: 282px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .comment__item--emotion textarea {
+    width: 920px;
+    margin: 33px auto 2px auto;
+  }
+
+  .comment__button {
+    width: 480px;
+  }
+
+  .comment__mark {
+    width: 480px;
+    margin-left: auto;
+  }
 }
