@@ -74,7 +74,22 @@
   background-color: @grey-color;
 }
 
+.video__button {
+  display: block;
+  position: relative;
+}
+
+.video__button {
+  margin-top: 20px;
+  background-color: transparent;
+  padding: 0;
+  display: block;
+  border: none;
+}
+
 .video__button svg {
+  position: absolute;
+  z-index: 20;
   color: @video-mobile-color;
 
   &:hover,
@@ -85,14 +100,6 @@
   &:active {
     opacity: 0.3;
   }
-}
-
-.video__button {
-  margin-top: 20px;
-  background-color: transparent;
-  padding: 0;
-  display: block;
-  border: none;
 }
 
 .video__button--replay {
