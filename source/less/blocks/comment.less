@@ -8,7 +8,6 @@
 
 .comment {
   width: 320px;
-  margin-bottom: 73px;
   padding-top: 40px;
   text-align: center;
 }
@@ -47,10 +46,8 @@
 
 .comment__item ul,
 .comment__item li {
-  margin: 0;
-  padding: 0;
+  .cancel();
   padding-left: 10px;
-  list-style: none;
 }
 
 .comment__label {
@@ -89,9 +86,8 @@
 }
 
 .comment__label input {
+  .cancel();
   height: 50px;
-  margin: 0;
-  padding: 0;
   padding-left: 20px;
   list-style: none;
 }
@@ -199,9 +195,9 @@
 
 .comment__item--impression li,
 .comment__item--sightseeing li {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   margin-bottom: 40px;
   margin-left: 80px;
 }
@@ -282,15 +278,17 @@
 }
 
 .comment__button {
+  position: relative;
+  display: block;
+  margin: 0 auto;
   margin-top: 18px;
-  padding: 16px 47px;
+  padding: 18px 47px;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
   color: @white-color;
   background-color: @blue-color;
-  border: none;
 }
 
 .comment__mark {
@@ -301,7 +299,6 @@
   .comment {
     width: 648px;
     margin: 0 auto;
-    margin-bottom: 70px;
     padding-top: 20px;
   }
 
@@ -311,7 +308,7 @@
   }
 
   .comment__description {
-    margin: 5px 105px;
+    margin: 5px 80px;
     border-bottom: none;
   }
 
@@ -368,8 +365,8 @@
 
   .comment__item--impression li {
     position: relative;
-    margin-left: 63px;
     margin-bottom: 52px;
+    margin-left: 63px;
   }
 
   .comment__item--impression li:last-child {
@@ -383,7 +380,6 @@
   .comment__label--radio label {
     margin-left: 0;
     padding-left: 6px;
-    left: 0;
   }
 
   .comment__radio + label::before {
@@ -449,11 +445,11 @@
   }
 
   .comment .comment__item--contacts {
+    position: static;
+    left: 0;
     width: 640px;
     padding-bottom: 0;
     text-align: left;
-    position: static;
-    left: 0;
     order: 3;
   }
 
@@ -601,8 +597,8 @@
 
   .comment__item--emotion {
     width: 648px;
-    order: 6;
     margin-top: 0;
+    order: 6;
   }
 
   .comment__item--emotion .comment__legend::before {
@@ -633,11 +629,10 @@
   }
 
   .comment__button {
-    order: 7;
     width: 322px;
     margin-top: -22px;
     margin-left: 0;
-    left: 0;
+    order: 7;
   }
 
   .comment__mark {
@@ -654,11 +649,10 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
   .comment {
     width: 964px;
     margin: 0 auto;
-    margin-bottom: 85px;
     padding-top: 10px;
   }
 
@@ -667,7 +661,7 @@
   }
 
   .comment__description {
-    margin: 2px 260px;
+    margin: 2px 240px;
   }
 
   .comment__form {

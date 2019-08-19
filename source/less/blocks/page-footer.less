@@ -8,7 +8,6 @@
 .page-footer__hashtag {
   .cancel();
   .container();
-  margin-top: 28px;
   margin-bottom: 35px;
   font-size: 21px;
 }
@@ -42,14 +41,18 @@
   }
 }
 
+.page-footer__made-by use:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 @media (min-width: @tablet-width) {
   .page-footer {
     .cancel();
     display: flex;
     flex-direction: row;
     align-items: center;
-    min-height: 120px;
-    margin-top: 25px;
+    min-height: 48px;
+    margin-bottom: 35px;
   }
 
   .page-footer__hashtag {
@@ -60,6 +63,7 @@
 
   .page-footer ul {
     .cancel();
+    margin-top: 0;
     margin-right: 20px;
   }
 
@@ -69,6 +73,7 @@
 
   .page-footer__made-by {
     .cancel();
+    margin-top: 10px;
     text-align: center;
   }
 
