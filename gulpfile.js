@@ -1,6 +1,3 @@
-const ghPages = require('gh-pages');
-const path = require('path');
-
 "use strict";
 
 var gulp = require("gulp");
@@ -18,6 +15,8 @@ var include = require("posthtml-include");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var del = require("del");
+const ghPages = require('gh-pages');
+const path = require('path');
 
 gulp.task("clean", function () {
   return del("build");
