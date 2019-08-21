@@ -49,6 +49,10 @@ gulp.task("css", function () {
     .pipe(gulp.dest("build/css"));
 });
 
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 
 gulp.task("images", function () {
@@ -103,8 +107,3 @@ gulp.task("refresh", function (done) {
   done();
 });
 gulp.task("start", gulp.series("build", "server"));
-
-function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), './build'), cb);
-}
-exports.deploy = deploy;
