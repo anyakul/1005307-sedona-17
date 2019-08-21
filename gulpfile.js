@@ -1,3 +1,6 @@
+const ghPages = require('gh-pages');
+const path = require('path');
+
 "use strict";
 
 var gulp = require("gulp");
@@ -100,3 +103,8 @@ gulp.task("refresh", function (done) {
   done();
 });
 gulp.task("start", gulp.series("build", "server"));
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
