@@ -230,6 +230,15 @@
   height: 55px;
   background-color: @grey-color;
   border-radius: 50%;
+
+  &:hover {
+    background-color: @grey-color-hover;
+  }
+
+  &:active,
+  &:focus {
+    background-color: @checkbox-active;
+  }
 }
 
 .comment__radio:checked + label::after {
@@ -241,6 +250,12 @@
   height: 20px;
   background-color: @black-color-text;
   border-radius: 50%;
+
+  &:active,
+  &:focus {
+    background-color: @black-color-text;
+    opacity: 0.3;
+  }
 }
 
 .comment__check-box + label::before {
@@ -251,6 +266,15 @@
   width: 55px;
   height: 55px;
   background-color: @grey-color;
+
+  &:hover {
+    background-color: @grey-color-hover;
+  }
+
+  &:active,
+  &:focus {
+    background-color: @checkbox-active;
+  }
 }
 
 .comment__check-box:checked + label::before {
@@ -263,6 +287,15 @@
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  &:hover {
+    background-color: @grey-color-hover;
+  }
+
+  &:active,
+  &:focus {
+    background-color: @checkbox-active;
+  }
 }
 
 .comment__item--emotion {

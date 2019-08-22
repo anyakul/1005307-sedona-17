@@ -8,9 +8,6 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <div style="display:none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
     <div class="body-wrapper">
       <header class="page-header">
         <a class="page-header__logo" href="index.html">
@@ -20,7 +17,7 @@
             <img src="img/logo-sedona-mobile.svg" alt="City of Sedona">
           </picture>
         </a>
-        <nav class="main-nav main-nav--opened main-nav--nojs">
+        <nav class="main-nav main-nav--opened <!--(main-nav--closed)--> main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -44,7 +41,7 @@
         </div>
         <section class="comment">
           <h1 class="comment__title">Оставьте свой отзыв</h1>
-          <p class="comment__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них,&nbsp а также о посещенных вами достопримечательностях</p>
+          <p class="comment__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них,&nbsp; а также о посещенных вами достопримечательностях</p>
           <form class="comment__form" method="POST" action="https://echo.htmlacademy.ru/">
             <fieldset class="comment__item comment__item--name">
               <legend class="comment__legend">Представьтесь:</legend>
@@ -155,11 +152,13 @@
         </a>
       </footer>
       <section class="modal-comment modal-comment--error">
+        <h2 class="visually-hidden">модальное окно ошибка</h2>
         <p class="modal-comment__title">Что-то пошло не так!</p>
         <p class="modal-comment__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="modal-comment__button buttons" type="submit">Ок</button>
       </section>
       <section class="modal-comment modal-comment--sent">
+        <h2 class="visually-hidden">модальное окно отправлено</h2>
         <p class="modal-comment__title">Ваш отзыв отправлен!</p>
         <p class="modal-comment__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте</p>
         <div class="modal-comment__bg-buttons">
