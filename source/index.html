@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="/fonts/PTSansNarrow.woff2" as="font">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
@@ -16,7 +17,7 @@
             <img src="img/logo-sedona-mobile.svg" alt="City of Sedona">
           </picture>
         </a>
-        <nav class="main-nav main-nav--opened main-nav--nojs">
+        <nav class="main-nav main-nav--opened main-nav--nojs <!--(main-nav--closed)-->">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
@@ -54,7 +55,7 @@
               <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
-              <img class="advantages-item__image" srcset="img/main-city-mobile@1x.jpg 1x, img/main-city-mobile@2x.jpg 2x" alt="Настоящий городок">
+              <img class="advantages-item__image" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@1x.jpg 1x, img/main-city-mobile@2x.jpg 2x" alt="Настоящий городок">
             </picture>
           </div>
           <ul class="advantages-additions">
@@ -68,10 +69,10 @@
             </li>
             <li class="advantages-additions__item advantages-additions__item--meal">
               <h3 class="advantages-additions__title">Еда</h3>
-              <p class="advantages-additions__description">Всегда заказывайте фирменный бургер,&nbsp вы не разочаруйтесь!</p>
+              <p class="advantages-additions__description">Всегда заказывайте фирменный бургер,&nbsp; вы не разочаруйтесь!</p>
             </li>
           </ul>
-          <div class="advantages-item advantages-item--diavols-bridge">
+          <div class="advantages__item advantages-item advantages-item--diavols-bridge">
             <div class="advantages-item__wrapper advantages-item__wrapper--diavols-bridge">
               <h3 class="advantages-item__title">Там есть<br> мост дьявола</h3>
               <p class="advantages-item__number">- №2 -</p>
@@ -83,7 +84,7 @@
               <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-              <img class="advantages-item__image" srcset="img/main-bridge-mobile@1x.jpg 1x, img/main-bridge-mobile@2x.jpg 2x" alt="Настоящий городок">
+              <img class="advantages-item__image" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@1x.jpg 1x, img/main-bridge-mobile@2x.jpg 2x" alt="Настоящий городок">
             </picture>
           </div>
           <div class="advantages__group">
@@ -142,13 +143,13 @@
         </ul>
         <a class="page-footer__made-by" href="https://htmlacademy.ru/intensive/adaptive">Разработано
           <svg class="page-footer__image" width="39" height="45">
-            <use xlink:href="img/sprite.svg#htmlacademy"></use>
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
       </footer>
     </div>
     <script src="js/picturefill.js"></script>
-    <script src="js/main-nav-script.js"></script>
     <script src="js/svgxuse.min.js"></script>
+    <script src="js/main-nav-script.js"></script>
   </body>
 </html>
