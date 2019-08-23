@@ -221,7 +221,7 @@
   font-size: @title-font-size;
 }
 
-.comment__radio + label::before {
+.comment__label--radio label::before {
   content: "";
   position: absolute;
   top: -16px;
@@ -230,15 +230,15 @@
   height: 55px;
   background-color: @grey-color;
   border-radius: 50%;
+}
 
-  &:hover {
-    background-color: @grey-color-hover;
-  }
+.comment__label--radio:hover label::before {
+  background-color: @grey-color-hover;
+}
 
-  &:active,
-  &:focus {
-    background-color: @checkbox-active;
-  }
+.comment__label--radio:active label::before,
+.comment__label--radio:focus label::before {
+  background-color: @checkbox-active;
 }
 
 .comment__radio:checked + label::after {
@@ -250,12 +250,12 @@
   height: 20px;
   background-color: @black-color-text;
   border-radius: 50%;
+}
 
-  &:active,
-  &:focus {
-    background-color: @black-color-text;
-    opacity: 0.3;
-  }
+.comment__radio:checked:active + label::after,
+.comment__radio:checked:focus + label::after {
+  background-color: @black-color-text;
+  opacity: 0.3;
 }
 
 .comment__check-box + label::before {
@@ -266,15 +266,15 @@
   width: 55px;
   height: 55px;
   background-color: @grey-color;
+}
 
-  &:hover {
-    background-color: @grey-color-hover;
-  }
+.comment__check-box:hover + label::before {
+  background-color: @grey-color-hover;
+}
 
-  &:active,
-  &:focus {
-    background-color: @checkbox-active;
-  }
+.comment__check-box:focus + label::before,
+.comment__check-box:active + label::before {
+  background-color: @checkbox-active;
 }
 
 .comment__check-box:checked + label::before {
@@ -287,15 +287,16 @@
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
 
-  &:hover {
-    background-color: @grey-color-hover;
-  }
+.comment__check-box:checked:hover + label::before {
+  background-color: @grey-color-hover;
+}
 
-  &:active,
-  &:focus {
-    background-color: @checkbox-active;
-  }
+.comment__check-box:checked:focus + label::before,
+.comment__check-box:checked:active + label::before {
+  background-color: @checkbox-active;
+  background-image: url("../img/icon-tick-active.svg");
 }
 
 .comment__item--emotion {
@@ -588,8 +589,8 @@
     content: "";
     position: absolute;
     top: 22px;
-    right: 376px;
-    width: 122px;
+    right: 350px;
+    width: 120px;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.1);
   }
@@ -598,8 +599,8 @@
     content: "";
     position: absolute;
     top: 22px;
-    left: 376px;
-    width: 122px;
+    left: 335px;
+    width: 120px;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.1);
   }

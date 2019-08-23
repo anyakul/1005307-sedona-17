@@ -65,7 +65,6 @@ function deploy(cb) {
 }
 exports.deploy = deploy;
 
-
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
   .pipe(imagemin([
@@ -106,16 +105,24 @@ gulp.task("build", gulp.series(
   "html"
 ));
 
-gulp.task("server", function () {
-  server.init({
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
+});
+
+var gulp = require("gulp");
+  gulp.task("server", function () {
+    server.init({
     server: "build/"
   });
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
+
 gulp.task("refresh", function (done) {
-  server.reload();
-  done();
+server.reload();
+done();
 });
+
 gulp.task("start", gulp.series("build", "server"));
